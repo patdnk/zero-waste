@@ -1,0 +1,661 @@
+[
+  {
+    "id": "classic-omelette",
+    "title": "Classic cheese omelette",
+    "summary": "Three eggs, a handful of cheese, two minutes in the pan. The fastest way to use up eggs.",
+    "prepMinutes": 10, "servings": 1, "tags": ["breakfast", "quick", "vegetarian"],
+    "ingredients": [
+      {"name": "eggs", "amount": "3"},
+      {"name": "cheese", "amount": "30g", "optional": true},
+      {"name": "butter", "amount": "1 tbsp"},
+      {"name": "milk", "amount": "splash", "optional": true},
+      {"name": "salt", "amount": "pinch"},
+      {"name": "black pepper", "amount": "pinch"}
+    ],
+    "steps": [
+      "Whisk the eggs with a splash of milk, salt and pepper.",
+      "Melt the butter in a non-stick pan over medium heat until foaming.",
+      "Pour in the eggs and drag the edges to the middle as they set.",
+      "Scatter cheese over one half, fold, and slide onto a plate."
+    ]
+  },
+  {
+    "id": "spinach-scramble",
+    "title": "Spinach & cheese scrambled eggs",
+    "summary": "Wilting spinach disappears into soft scrambled eggs.",
+    "prepMinutes": 10, "servings": 1, "tags": ["breakfast", "quick", "vegetarian"],
+    "ingredients": [
+      {"name": "eggs", "amount": "2"},
+      {"name": "spinach", "amount": "large handful"},
+      {"name": "cheese", "amount": "20g", "optional": true},
+      {"name": "butter", "amount": "1 tsp"},
+      {"name": "bread", "amount": "1 slice, toasted", "optional": true}
+    ],
+    "steps": [
+      "Wilt the spinach in butter for a minute, then squeeze out the water.",
+      "Add the beaten eggs and stir gently over low heat until just set.",
+      "Stir through the cheese and serve on toast."
+    ]
+  },
+  {
+    "id": "creamy-mushroom-pasta",
+    "title": "Creamy mushroom pasta",
+    "summary": "Garlicky mushrooms in a silky sauce. Cream is best, but milk and a little cheese works too.",
+    "prepMinutes": 25, "servings": 2, "tags": ["dinner", "vegetarian"],
+    "ingredients": [
+      {"name": "pasta", "amount": "200g"},
+      {"name": "mushrooms", "amount": "250g"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "cream", "amount": "150ml", "optional": true},
+      {"name": "cheese", "amount": "30g, grated", "optional": true},
+      {"name": "butter", "amount": "1 tbsp"},
+      {"name": "olive oil", "amount": "1 tbsp"}
+    ],
+    "steps": [
+      "Cook the pasta in salted water; keep a mug of the cooking water.",
+      "Fry sliced mushrooms hard in butter and oil until golden, then add the garlic.",
+      "Add the cream (or a splash of pasta water and cheese) and simmer for a minute.",
+      "Toss the pasta through the sauce, loosening with pasta water."
+    ]
+  },
+  {
+    "id": "chicken-stir-fry",
+    "title": "Chicken & pepper stir-fry",
+    "summary": "A fast wok dinner that eats through whatever vegetables are going soft.",
+    "prepMinutes": 20, "servings": 2, "tags": ["dinner", "quick"],
+    "ingredients": [
+      {"name": "chicken", "amount": "2 breasts, sliced"},
+      {"name": "bell pepper", "amount": "1, sliced"},
+      {"name": "onion", "amount": "1, sliced"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "soy sauce", "amount": "2 tbsp"},
+      {"name": "rice", "amount": "150g, to serve"},
+      {"name": "vegetable oil", "amount": "1 tbsp"},
+      {"name": "carrots", "amount": "1, in matchsticks", "optional": true}
+    ],
+    "steps": [
+      "Get the rice on first.",
+      "Stir-fry the chicken in very hot oil until browned, then set aside.",
+      "Fry the onion, pepper and carrot for 3 minutes, add the garlic.",
+      "Return the chicken, splash in soy sauce and toss for a minute. Serve on rice."
+    ]
+  },
+  {
+    "id": "tomato-garlic-pasta",
+    "title": "Blistered tomato pasta",
+    "summary": "Soft cherry tomatoes collapse into a sauce with garlic and olive oil.",
+    "prepMinutes": 20, "servings": 2, "tags": ["dinner", "vegetarian", "quick"],
+    "ingredients": [
+      {"name": "pasta", "amount": "200g"},
+      {"name": "tomatoes", "amount": "300g"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "olive oil", "amount": "3 tbsp"},
+      {"name": "cheese", "amount": "to serve", "optional": true},
+      {"name": "basil", "amount": "few leaves", "optional": true}
+    ],
+    "steps": [
+      "Cook the pasta.",
+      "Fry the tomatoes in plenty of olive oil until they burst, then add sliced garlic.",
+      "Crush a few tomatoes with a spoon, season, and toss with the pasta and a little cooking water.",
+      "Finish with cheese and basil."
+    ]
+  },
+  {
+    "id": "cheese-toastie",
+    "title": "Cheese toastie",
+    "summary": "Bread going stale and a wedge of cheese: the classic rescue.",
+    "prepMinutes": 10, "servings": 1, "tags": ["lunch", "quick", "vegetarian"],
+    "ingredients": [
+      {"name": "bread", "amount": "2 slices"},
+      {"name": "cheese", "amount": "50g"},
+      {"name": "butter", "amount": "for spreading"},
+      {"name": "onion", "amount": "a few thin slices", "optional": true}
+    ],
+    "steps": [
+      "Butter the outside of both slices.",
+      "Fill with cheese (and onion) and toast in a dry pan over medium heat, pressing down.",
+      "Flip when golden and cook until the cheese melts."
+    ]
+  },
+  {
+    "id": "french-toast",
+    "title": "French toast",
+    "summary": "Stale bread is actually better here. Eggs and milk soak in, then it's fried golden.",
+    "prepMinutes": 15, "servings": 2, "tags": ["breakfast", "vegetarian"],
+    "ingredients": [
+      {"name": "bread", "amount": "4 slices"},
+      {"name": "eggs", "amount": "2"},
+      {"name": "milk", "amount": "100ml"},
+      {"name": "butter", "amount": "1 tbsp"},
+      {"name": "sugar", "amount": "1 tsp"},
+      {"name": "bananas", "amount": "1, sliced, to serve", "optional": true}
+    ],
+    "steps": [
+      "Whisk the eggs, milk and sugar in a shallow dish.",
+      "Soak each slice for 20 seconds a side.",
+      "Fry in butter until golden on both sides. Top with banana."
+    ]
+  },
+  {
+    "id": "banana-pancakes",
+    "title": "Banana pancakes",
+    "summary": "Overripe bananas mashed into a quick batter.",
+    "prepMinutes": 20, "servings": 2, "tags": ["breakfast", "vegetarian"],
+    "ingredients": [
+      {"name": "bananas", "amount": "2, very ripe"},
+      {"name": "eggs", "amount": "2"},
+      {"name": "flour", "amount": "100g"},
+      {"name": "milk", "amount": "100ml"},
+      {"name": "butter", "amount": "for frying"}
+    ],
+    "steps": [
+      "Mash the bananas, whisk in the eggs and milk, then fold in the flour.",
+      "Fry small ladlefuls in butter for 2 minutes a side.",
+      "Serve with anything sweet you have."
+    ]
+  },
+  {
+    "id": "veggie-frittata",
+    "title": "Leftover veg frittata",
+    "summary": "An oven omelette that takes any cooked or soft vegetables.",
+    "prepMinutes": 35, "servings": 4, "tags": ["dinner", "lunch", "vegetarian"],
+    "ingredients": [
+      {"name": "eggs", "amount": "6"},
+      {"name": "potatoes", "amount": "2, cooked and sliced"},
+      {"name": "onion", "amount": "1"},
+      {"name": "bell pepper", "amount": "1", "optional": true},
+      {"name": "cheese", "amount": "50g", "optional": true},
+      {"name": "olive oil", "amount": "2 tbsp"}
+    ],
+    "steps": [
+      "Soften the onion and pepper in oil in an ovenproof pan, then add the potato.",
+      "Pour over the beaten, seasoned eggs and scatter with cheese.",
+      "Cook on the hob for 5 minutes, then finish under the grill until set and golden."
+    ]
+  },
+  {
+    "id": "chicken-rice-soup",
+    "title": "Chicken & rice soup",
+    "summary": "A big comforting pot that stretches a little chicken a long way.",
+    "prepMinutes": 40, "servings": 4, "tags": ["dinner", "batch"],
+    "ingredients": [
+      {"name": "chicken", "amount": "2 breasts or thighs"},
+      {"name": "rice", "amount": "100g"},
+      {"name": "carrots", "amount": "2, diced"},
+      {"name": "onion", "amount": "1, diced"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "stock", "amount": "1.2 litres"},
+      {"name": "lemon", "amount": "juice of half", "optional": true}
+    ],
+    "steps": [
+      "Sweat the onion, carrot and garlic in a little oil for 8 minutes.",
+      "Add the stock and chicken; simmer 15 minutes, then lift out and shred the chicken.",
+      "Add the rice and cook until tender, return the chicken and season with lemon."
+    ]
+  },
+  {
+    "id": "lemon-garlic-salmon",
+    "title": "Lemon garlic salmon",
+    "summary": "Salmon fillets in a butter, garlic and lemon pan sauce with wilted spinach.",
+    "prepMinutes": 20, "servings": 2, "tags": ["dinner", "quick"],
+    "ingredients": [
+      {"name": "salmon", "amount": "2 fillets"},
+      {"name": "lemon", "amount": "1"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "butter", "amount": "2 tbsp"},
+      {"name": "spinach", "amount": "2 handfuls", "optional": true},
+      {"name": "potatoes", "amount": "to serve", "optional": true}
+    ],
+    "steps": [
+      "Season the salmon and fry skin-side down in a little oil for 4 minutes.",
+      "Flip, add the butter and garlic, and baste for 2 minutes.",
+      "Squeeze in the lemon, add the spinach to wilt, and serve."
+    ]
+  },
+  {
+    "id": "carbonara",
+    "title": "Spaghetti carbonara",
+    "summary": "Bacon, eggs and cheese make the sauce. No cream needed.",
+    "prepMinutes": 20, "servings": 2, "tags": ["dinner", "quick"],
+    "ingredients": [
+      {"name": "spaghetti", "amount": "200g"},
+      {"name": "bacon", "amount": "100g"},
+      {"name": "eggs", "amount": "2 plus 1 yolk"},
+      {"name": "cheese", "amount": "50g, finely grated"},
+      {"name": "black pepper", "amount": "lots"}
+    ],
+    "steps": [
+      "Cook the spaghetti; keep a mug of cooking water.",
+      "Fry the chopped bacon until crisp and turn off the heat.",
+      "Whisk the eggs with the cheese and pepper.",
+      "Toss the hot pasta in the bacon pan, then off the heat stir in the egg mix, loosening with pasta water until glossy."
+    ]
+  },
+  {
+    "id": "mushroom-risotto",
+    "title": "Mushroom risotto",
+    "summary": "Slow-stirred rice with browned mushrooms and plenty of cheese.",
+    "prepMinutes": 40, "servings": 2, "tags": ["dinner", "vegetarian"],
+    "ingredients": [
+      {"name": "rice", "amount": "200g"},
+      {"name": "mushrooms", "amount": "250g"},
+      {"name": "onion", "amount": "1, finely diced"},
+      {"name": "butter", "amount": "2 tbsp"},
+      {"name": "cheese", "amount": "40g, grated"},
+      {"name": "stock", "amount": "800ml, hot"},
+      {"name": "garlic", "amount": "1 clove", "optional": true}
+    ],
+    "steps": [
+      "Fry the mushrooms in half the butter until golden; set aside.",
+      "Soften the onion in the rest of the butter, add the rice and stir for a minute.",
+      "Add stock a ladle at a time, stirring, until the rice is creamy and just tender.",
+      "Stir in the mushrooms and cheese, season, and rest for 2 minutes."
+    ]
+  },
+  {
+    "id": "bacon-egg-roll",
+    "title": "Bacon & egg breakfast roll",
+    "summary": "Crisp bacon, a fried egg, whatever bread you've got.",
+    "prepMinutes": 10, "servings": 1, "tags": ["breakfast", "quick"],
+    "ingredients": [
+      {"name": "bread", "amount": "1 roll or 2 slices"},
+      {"name": "bacon", "amount": "2 rashers"},
+      {"name": "eggs", "amount": "1"},
+      {"name": "butter", "amount": "for spreading", "optional": true}
+    ],
+    "steps": [
+      "Fry the bacon until crisp, then fry the egg in the bacon fat.",
+      "Toast the bread, butter it, and stack."
+    ]
+  },
+  {
+    "id": "tomato-soup",
+    "title": "Roasted tomato soup",
+    "summary": "Soft tomatoes roasted with onion and garlic, then blended.",
+    "prepMinutes": 45, "servings": 4, "tags": ["lunch", "vegetarian", "batch"],
+    "ingredients": [
+      {"name": "tomatoes", "amount": "800g"},
+      {"name": "onion", "amount": "1, quartered"},
+      {"name": "garlic", "amount": "3 cloves"},
+      {"name": "olive oil", "amount": "3 tbsp"},
+      {"name": "stock", "amount": "400ml"},
+      {"name": "cream", "amount": "splash", "optional": true},
+      {"name": "bread", "amount": "to serve", "optional": true}
+    ],
+    "steps": [
+      "Roast the tomatoes, onion and garlic with the oil at 200°C for 30 minutes.",
+      "Blend with the stock until smooth, season, and add cream if you like.",
+      "Serve with toasted bread."
+    ]
+  },
+  {
+    "id": "garlic-butter-potatoes",
+    "title": "Garlic butter potatoes",
+    "summary": "Crushed boiled potatoes crisped in garlic butter.",
+    "prepMinutes": 30, "servings": 2, "tags": ["side", "vegetarian"],
+    "ingredients": [
+      {"name": "potatoes", "amount": "500g"},
+      {"name": "garlic", "amount": "3 cloves"},
+      {"name": "butter", "amount": "3 tbsp"},
+      {"name": "parsley", "amount": "chopped", "optional": true}
+    ],
+    "steps": [
+      "Boil the potatoes until tender, drain and lightly crush.",
+      "Fry in butter with the garlic until the edges are crisp. Season and add parsley."
+    ]
+  },
+  {
+    "id": "fridge-fried-rice",
+    "title": "Fridge-raid fried rice",
+    "summary": "Leftover rice, an egg, and any vegetables that need using. Cold rice fries best.",
+    "prepMinutes": 15, "servings": 2, "tags": ["dinner", "quick", "leftovers"],
+    "ingredients": [
+      {"name": "rice", "amount": "300g cooked"},
+      {"name": "eggs", "amount": "2"},
+      {"name": "carrots", "amount": "1, diced"},
+      {"name": "onion", "amount": "1"},
+      {"name": "soy sauce", "amount": "2 tbsp"},
+      {"name": "vegetable oil", "amount": "2 tbsp"},
+      {"name": "bell pepper", "amount": "1", "optional": true},
+      {"name": "chicken", "amount": "leftover, shredded", "optional": true},
+      {"name": "spring onion", "amount": "2", "optional": true}
+    ],
+    "steps": [
+      "Scramble the eggs in a hot wok and set aside.",
+      "Fry the onion, carrot and pepper for 3 minutes.",
+      "Add the rice and chicken, fry until sizzling, then splash in soy sauce and stir in the egg."
+    ]
+  },
+  {
+    "id": "yogurt-parfait",
+    "title": "Yogurt & banana parfait",
+    "summary": "Layers of yogurt, fruit and crunch for breakfast or dessert.",
+    "prepMinutes": 5, "servings": 1, "tags": ["breakfast", "quick", "vegetarian", "no-cook"],
+    "ingredients": [
+      {"name": "yogurt", "amount": "150g"},
+      {"name": "bananas", "amount": "1"},
+      {"name": "oats", "amount": "2 tbsp", "optional": true},
+      {"name": "honey", "amount": "drizzle", "optional": true},
+      {"name": "berries", "amount": "handful", "optional": true}
+    ],
+    "steps": [
+      "Layer yogurt with sliced banana, berries and oats in a glass.",
+      "Drizzle with honey."
+    ]
+  },
+  {
+    "id": "chicken-caesar-wrap",
+    "title": "Chicken Caesar wrap",
+    "summary": "Leftover chicken, crunchy lettuce and a quick yogurt dressing.",
+    "prepMinutes": 10, "servings": 1, "tags": ["lunch", "quick", "no-cook"],
+    "ingredients": [
+      {"name": "chicken", "amount": "1 breast, cooked"},
+      {"name": "tortilla", "amount": "1"},
+      {"name": "lettuce", "amount": "handful"},
+      {"name": "yogurt", "amount": "2 tbsp"},
+      {"name": "cheese", "amount": "grated, 1 tbsp"},
+      {"name": "lemon", "amount": "squeeze", "optional": true}
+    ],
+    "steps": [
+      "Mix the yogurt with cheese, lemon, salt and pepper.",
+      "Pile chicken and lettuce into the tortilla, spoon over the dressing, and roll."
+    ]
+  },
+  {
+    "id": "stuffed-peppers",
+    "title": "Cheesy stuffed peppers",
+    "summary": "Peppers filled with tomato rice and baked under cheese.",
+    "prepMinutes": 45, "servings": 2, "tags": ["dinner", "vegetarian"],
+    "ingredients": [
+      {"name": "bell pepper", "amount": "2, halved"},
+      {"name": "rice", "amount": "200g cooked"},
+      {"name": "tomatoes", "amount": "150g, chopped"},
+      {"name": "onion", "amount": "1, diced"},
+      {"name": "cheese", "amount": "60g"},
+      {"name": "garlic", "amount": "1 clove", "optional": true}
+    ],
+    "steps": [
+      "Soften the onion and garlic, stir in the tomatoes and rice, and season.",
+      "Fill the pepper halves, top with cheese and bake at 190°C for 25 minutes."
+    ]
+  },
+  {
+    "id": "spinach-mushroom-quesadilla",
+    "title": "Spinach & mushroom quesadilla",
+    "summary": "A crisp folded tortilla with melted cheese and wilted greens.",
+    "prepMinutes": 15, "servings": 1, "tags": ["lunch", "quick", "vegetarian"],
+    "ingredients": [
+      {"name": "tortilla", "amount": "1 large"},
+      {"name": "spinach", "amount": "handful"},
+      {"name": "mushrooms", "amount": "4, sliced"},
+      {"name": "cheese", "amount": "50g"},
+      {"name": "olive oil", "amount": "1 tsp"}
+    ],
+    "steps": [
+      "Fry the mushrooms, add the spinach to wilt, and season.",
+      "Spread over half the tortilla with the cheese, fold, and toast in the pan until golden both sides."
+    ]
+  },
+  {
+    "id": "bolognese",
+    "title": "Weeknight bolognese",
+    "summary": "A quick meat sauce that's better the next day and freezes well.",
+    "prepMinutes": 45, "servings": 4, "tags": ["dinner", "batch"],
+    "ingredients": [
+      {"name": "mince", "amount": "400g"},
+      {"name": "onion", "amount": "1"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "tomatoes", "amount": "400g, chopped or tinned"},
+      {"name": "pasta", "amount": "300g"},
+      {"name": "carrots", "amount": "1, grated", "optional": true},
+      {"name": "cheese", "amount": "to serve", "optional": true}
+    ],
+    "steps": [
+      "Brown the mince hard, then add the onion, carrot and garlic.",
+      "Add the tomatoes and a splash of water; simmer 25 minutes.",
+      "Serve over pasta with cheese."
+    ]
+  },
+  {
+    "id": "carrot-soup",
+    "title": "Carrot & ginger soup",
+    "summary": "Sweet, warming and uses a whole bag of carrots.",
+    "prepMinutes": 35, "servings": 4, "tags": ["lunch", "vegetarian", "batch"],
+    "ingredients": [
+      {"name": "carrots", "amount": "600g"},
+      {"name": "onion", "amount": "1"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "ginger", "amount": "thumb-sized piece", "optional": true},
+      {"name": "stock", "amount": "1 litre"},
+      {"name": "cream", "amount": "splash", "optional": true}
+    ],
+    "steps": [
+      "Sweat the onion, garlic and ginger, add the chopped carrots and stock.",
+      "Simmer 20 minutes, blend smooth, and season. Add cream if you like."
+    ]
+  },
+  {
+    "id": "bread-butter-pudding",
+    "title": "Bread & butter pudding",
+    "summary": "The definitive use for a stale loaf.",
+    "prepMinutes": 50, "servings": 4, "tags": ["dessert", "vegetarian"],
+    "ingredients": [
+      {"name": "bread", "amount": "6 slices"},
+      {"name": "eggs", "amount": "2"},
+      {"name": "milk", "amount": "400ml"},
+      {"name": "butter", "amount": "for spreading"},
+      {"name": "sugar", "amount": "50g"},
+      {"name": "raisins", "amount": "handful", "optional": true}
+    ],
+    "steps": [
+      "Butter the bread, cut into triangles and layer in a dish with raisins.",
+      "Whisk the eggs, milk and sugar; pour over and leave 15 minutes.",
+      "Bake at 180°C for 30 minutes until puffed and golden."
+    ]
+  },
+  {
+    "id": "salmon-fried-rice",
+    "title": "Salmon fried rice",
+    "summary": "Flaked salmon through egg fried rice.",
+    "prepMinutes": 20, "servings": 2, "tags": ["dinner", "quick"],
+    "ingredients": [
+      {"name": "salmon", "amount": "2 fillets"},
+      {"name": "rice", "amount": "300g cooked"},
+      {"name": "eggs", "amount": "2"},
+      {"name": "soy sauce", "amount": "2 tbsp"},
+      {"name": "spring onion", "amount": "2", "optional": true},
+      {"name": "carrots", "amount": "1, diced", "optional": true}
+    ],
+    "steps": [
+      "Pan-fry the salmon, then flake it.",
+      "Scramble the eggs in a hot wok, add the rice and carrot, fry hard.",
+      "Fold in the salmon, soy sauce and spring onion."
+    ]
+  },
+  {
+    "id": "veg-traybake",
+    "title": "Roast vegetable traybake",
+    "summary": "Everything that's going soft, roasted until sweet and crisp.",
+    "prepMinutes": 45, "servings": 2, "tags": ["dinner", "vegetarian", "side"],
+    "ingredients": [
+      {"name": "potatoes", "amount": "400g, chunks"},
+      {"name": "bell pepper", "amount": "1"},
+      {"name": "onion", "amount": "1, wedges"},
+      {"name": "carrots", "amount": "2"},
+      {"name": "garlic", "amount": "whole cloves"},
+      {"name": "olive oil", "amount": "3 tbsp"},
+      {"name": "cheese", "amount": "crumbled, to finish", "optional": true}
+    ],
+    "steps": [
+      "Toss everything in oil and salt on a large tray.",
+      "Roast at 200°C for 35–40 minutes, turning once, until caramelised."
+    ]
+  },
+  {
+    "id": "lemon-chicken-traybake",
+    "title": "Lemon chicken traybake",
+    "summary": "One tray: chicken, potatoes, lemon and garlic.",
+    "prepMinutes": 55, "servings": 2, "tags": ["dinner"],
+    "ingredients": [
+      {"name": "chicken", "amount": "2 thighs or breasts"},
+      {"name": "potatoes", "amount": "400g"},
+      {"name": "lemon", "amount": "1, in wedges"},
+      {"name": "garlic", "amount": "4 cloves"},
+      {"name": "olive oil", "amount": "2 tbsp"},
+      {"name": "onion", "amount": "1", "optional": true}
+    ],
+    "steps": [
+      "Toss everything with oil and salt in a roasting tin, chicken on top.",
+      "Roast at 200°C for 40–45 minutes until the chicken is golden and potatoes are crisp."
+    ]
+  },
+  {
+    "id": "egg-fried-noodles",
+    "title": "Egg fried noodles",
+    "summary": "Ten-minute noodles with egg and crunchy veg.",
+    "prepMinutes": 12, "servings": 1, "tags": ["dinner", "quick"],
+    "ingredients": [
+      {"name": "noodles", "amount": "1 nest"},
+      {"name": "eggs", "amount": "1"},
+      {"name": "carrots", "amount": "1, shredded"},
+      {"name": "soy sauce", "amount": "1 tbsp"},
+      {"name": "garlic", "amount": "1 clove"},
+      {"name": "spring onion", "amount": "1", "optional": true}
+    ],
+    "steps": [
+      "Cook the noodles and drain.",
+      "Stir-fry the carrot and garlic, push aside, scramble the egg.",
+      "Toss in the noodles and soy sauce."
+    ]
+  },
+  {
+    "id": "cheesy-baked-potatoes",
+    "title": "Cheesy baked potatoes",
+    "summary": "Crisp skins, fluffy middles, molten cheese.",
+    "prepMinutes": 70, "servings": 2, "tags": ["dinner", "vegetarian"],
+    "ingredients": [
+      {"name": "potatoes", "amount": "2 large"},
+      {"name": "cheese", "amount": "80g"},
+      {"name": "butter", "amount": "2 tbsp"},
+      {"name": "bacon", "amount": "2 rashers, crisped", "optional": true},
+      {"name": "spring onion", "amount": "1", "optional": true}
+    ],
+    "steps": [
+      "Bake the potatoes at 200°C for an hour until the skins are crisp.",
+      "Split, mash the insides with butter and most of the cheese, refill and top with the rest.",
+      "Return to the oven for 10 minutes. Scatter with bacon."
+    ]
+  },
+  {
+    "id": "overnight-oats",
+    "title": "Overnight oats",
+    "summary": "Stir it together tonight, breakfast is done.",
+    "prepMinutes": 5, "servings": 1, "tags": ["breakfast", "vegetarian", "no-cook"],
+    "ingredients": [
+      {"name": "oats", "amount": "50g"},
+      {"name": "milk", "amount": "100ml"},
+      {"name": "yogurt", "amount": "2 tbsp"},
+      {"name": "bananas", "amount": "1", "optional": true},
+      {"name": "honey", "amount": "1 tsp", "optional": true}
+    ],
+    "steps": [
+      "Mix the oats, milk and yogurt in a jar and refrigerate overnight.",
+      "Top with banana and honey in the morning."
+    ]
+  },
+  {
+    "id": "banana-smoothie",
+    "title": "Banana smoothie",
+    "summary": "Speckled bananas are the sweetest — blend them.",
+    "prepMinutes": 5, "servings": 1, "tags": ["breakfast", "quick", "vegetarian", "no-cook"],
+    "ingredients": [
+      {"name": "bananas", "amount": "1"},
+      {"name": "milk", "amount": "200ml"},
+      {"name": "yogurt", "amount": "2 tbsp", "optional": true},
+      {"name": "spinach", "amount": "handful", "optional": true},
+      {"name": "berries", "amount": "handful", "optional": true}
+    ],
+    "steps": [
+      "Blend everything until smooth. Add ice if you like it cold."
+    ]
+  },
+  {
+    "id": "tuna-pasta-bake",
+    "title": "Tuna pasta bake",
+    "summary": "Store-cupboard tuna with cheese and tomatoes, baked golden.",
+    "prepMinutes": 40, "servings": 4, "tags": ["dinner", "batch"],
+    "ingredients": [
+      {"name": "pasta", "amount": "300g"},
+      {"name": "tuna", "amount": "2 tins"},
+      {"name": "cheese", "amount": "100g"},
+      {"name": "tomatoes", "amount": "400g, chopped or tinned"},
+      {"name": "onion", "amount": "1"},
+      {"name": "cream", "amount": "100ml", "optional": true}
+    ],
+    "steps": [
+      "Cook the pasta; soften the onion and add the tomatoes to make a sauce.",
+      "Stir in the tuna, pasta, cream and half the cheese.",
+      "Top with the remaining cheese and bake at 200°C for 20 minutes."
+    ]
+  },
+  {
+    "id": "shakshuka",
+    "title": "Shakshuka",
+    "summary": "Eggs poached in a spiced pepper and tomato sauce.",
+    "prepMinutes": 30, "servings": 2, "tags": ["breakfast", "dinner", "vegetarian"],
+    "ingredients": [
+      {"name": "eggs", "amount": "4"},
+      {"name": "tomatoes", "amount": "400g"},
+      {"name": "bell pepper", "amount": "1"},
+      {"name": "onion", "amount": "1"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "olive oil", "amount": "2 tbsp"},
+      {"name": "bread", "amount": "to serve", "optional": true},
+      {"name": "cheese", "amount": "crumbled feta", "optional": true}
+    ],
+    "steps": [
+      "Soften the onion and pepper in oil, add the garlic, then the tomatoes; simmer 10 minutes.",
+      "Make wells, crack in the eggs, cover and cook until the whites set.",
+      "Scatter with cheese and serve with bread."
+    ]
+  },
+  {
+    "id": "veggie-stir-fry",
+    "title": "Crunchy veg stir-fry",
+    "summary": "Peppers, carrots and mushrooms with garlic and soy, over rice or noodles.",
+    "prepMinutes": 15, "servings": 2, "tags": ["dinner", "quick", "vegetarian"],
+    "ingredients": [
+      {"name": "bell pepper", "amount": "1"},
+      {"name": "carrots", "amount": "2"},
+      {"name": "mushrooms", "amount": "150g"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "soy sauce", "amount": "2 tbsp"},
+      {"name": "rice", "amount": "to serve"},
+      {"name": "vegetable oil", "amount": "1 tbsp"}
+    ],
+    "steps": [
+      "Slice all the vegetables thinly.",
+      "Stir-fry in very hot oil for 4 minutes, add the garlic and soy sauce, toss and serve."
+    ]
+  },
+  {
+    "id": "creamy-chicken-mushroom",
+    "title": "Creamy chicken & mushrooms",
+    "summary": "Pan-fried chicken in a garlicky mushroom cream sauce.",
+    "prepMinutes": 30, "servings": 2, "tags": ["dinner"],
+    "ingredients": [
+      {"name": "chicken", "amount": "2 breasts"},
+      {"name": "mushrooms", "amount": "200g"},
+      {"name": "cream", "amount": "150ml"},
+      {"name": "garlic", "amount": "2 cloves"},
+      {"name": "onion", "amount": "1 small"},
+      {"name": "butter", "amount": "1 tbsp"},
+      {"name": "potatoes", "amount": "to serve", "optional": true}
+    ],
+    "steps": [
+      "Brown the chicken in butter, then set aside.",
+      "Fry the mushrooms and onion until golden, add the garlic, then the cream.",
+      "Return the chicken and simmer 8 minutes until cooked through."
+    ]
+  }
+]

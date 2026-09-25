@@ -1,0 +1,62 @@
+name: ZeroWaste
+options:
+  bundleIdPrefix: com.mazesys
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    DEVELOPMENT_TEAM: NU6K42S2Q4
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+targets:
+  ZeroWaste:
+    type: application
+    platform: iOS
+    sources:
+      - path: ZeroWaste
+    info:
+      path: ZeroWaste/Info.plist
+      properties:
+        CFBundleDisplayName: Zero Waste
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: Zero Waste uses the camera to read best-before dates and barcodes on food labels.
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mazesys.zerowaste
+        TARGETED_DEVICE_FAMILY: "1"
+        ENABLE_PREVIEWS: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        SWIFT_EMIT_LOC_STRINGS: YES
+  ZeroWasteTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ZeroWasteTests
+    dependencies:
+      - target: ZeroWaste
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mazesys.zerowaste.tests
+schemes:
+  ZeroWaste:
+    build:
+      targets:
+        ZeroWaste: all
+        ZeroWasteTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - ZeroWasteTests
