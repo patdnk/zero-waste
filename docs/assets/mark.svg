@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Zero Bite mark. Geometry mirrors ZeroBite/UI/BrandMark.swift, which renders the shipped icons. -->
+  <defs>
+    <clipPath id="ring-edge"><circle cx="512" cy="512" r="413"/></clipPath>
+    <mask id="bite">
+      <rect width="1024" height="1024" fill="#fff"/>
+      <circle cx="885" cy="464" r="175" fill="#000"/>
+    </mask>
+  </defs>
+  <g mask="url(#bite)">
+    <circle cx="512" cy="512" r="376" fill="#FFFBF7"/>
+    <circle cx="512" cy="512" r="300" fill="#B23A22"/>
+    <g transform="translate(512 512) scale(0.909) translate(-512 -512)" fill="#FFFBF7">
+      <rect x="372" y="352" width="280" height="84"/>
+      <rect x="372" y="588" width="280" height="84"/>
+      <g clip-path="url(#ring-edge)">
+        <rect x="-100" y="470" width="1224" height="84" transform="rotate(-40 512 512)"/>
+      </g>
+    </g>
+  </g>
+</svg>
