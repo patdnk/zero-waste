@@ -62,6 +62,11 @@ struct InventoryView: View {
 
     @ViewBuilder
     private var content: some View {
+        let recallMatches = viewModel.recallMatches
+        if !recallMatches.isEmpty {
+            RecallBanner(matches: recallMatches) { viewModel.showRecalledItem($0) }
+        }
+
         if viewModel.showsNotificationTip {
             notificationTip
         }
@@ -96,10 +101,11 @@ struct InventoryView: View {
                     detail: section.items.count == 1 ? "1 item" : "\(section.items.count) items",
                     tint: section.status == .fresh ? Constants.TextPrimary : section.status.tint
                 )
+                let flagged = viewModel.recalledItemIDs
                 LazyVGrid(columns: columns, spacing: Spacing.sm) {
                     ForEach(section.items) { item in
                         NavigationLink(value: InventoryRoute.itemDetail(item.id)) {
-                            FoodItemCard(item: item, soonThresholdDays: viewModel.soonThresholdDays)
+                            FoodItemCard(item: item, soonThresholdDays: viewModel.soonThresholdDays, isRecallFlagged: flagged.contains(item.id))
                         }
                         .buttonStyle(.plain)
                         .contextMenu { itemMenu(for: item) }

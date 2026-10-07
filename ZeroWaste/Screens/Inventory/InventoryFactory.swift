@@ -15,7 +15,8 @@ enum InventoryFactory {
             store: dependencies.inventory,
             settings: dependencies.settings,
             notifications: dependencies.notifications,
-            coordinator: coordinator
+            coordinator: coordinator,
+            recalls: dependencies.recalls
         )) { viewModel in
             InventoryView(viewModel: viewModel, coordinator: coordinator, dependencies: dependencies)
         }
@@ -33,6 +34,7 @@ enum InventoryFactory {
             store: dependencies.inventory,
             settings: dependencies.settings,
             recipes: dependencies.recipes,
+            recalls: dependencies.recalls,
             onEdit: onEdit,
             onShowRecipe: onShowRecipe,
             onDeleted: onDeleted

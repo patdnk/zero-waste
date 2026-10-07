@@ -74,6 +74,37 @@ final class SettingsViewModel {
         await notifications.refreshAuthorizationStatus()
     }
 
+    // MARK: - Food safety
+
+    var recallChecksEnabled: Bool {
+        get { settings.recallChecksEnabled }
+        set {
+            settings.recallChecksEnabled = newValue
+            if newValue { Task { await dependencies.refreshRecalls(force: true) } }
+        }
+    }
+
+    func isSelected(_ allergen: Allergen) -> Bool {
+        settings.allergenProfile.contains(allergen)
+    }
+
+    func toggle(_ allergen: Allergen) {
+        var profile = settings.allergenProfile
+        if let index = profile.firstIndex(of: allergen) {
+            profile.remove(at: index)
+        } else {
+            profile.append(allergen)
+        }
+        settings.allergenProfile = profile
+    }
+
+    var alertsSummary: String {
+        let recalls = dependencies.recalls
+        guard let checked = recalls.lastChecked else { return "Not checked yet" }
+        let count = recalls.alerts.count
+        return "\(count) in the last \(RecallStore.historyDays) days · checked \(checked.formatted(.relative(presentation: .named)))"
+    }
+
     func setNotificationsEnabled(_ enabled: Bool) async {
         isUpdatingNotifications = true
         defer { isUpdatingNotifications = false }

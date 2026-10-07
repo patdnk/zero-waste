@@ -76,6 +76,7 @@ final class ScanReviewViewModel {
         draft.name = name.trimmingCharacters(in: .whitespaces)
         draft.category = category
         draft.barcode = barcode
+        draft.brand = product?.brand
         if let date = selectedCandidate?.date {
             draft.expiresAt = date
         } else {

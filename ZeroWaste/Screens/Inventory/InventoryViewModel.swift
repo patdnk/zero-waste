@@ -47,6 +47,7 @@ final class InventoryViewModel {
     private let settings: AppSettings
     private let notifications: ExpiryNotificationService
     private let coordinator: InventoryCoordinator
+    private let recalls: RecallStore?
     private let now: () -> Date
 
     init(
@@ -54,12 +55,14 @@ final class InventoryViewModel {
         settings: AppSettings,
         notifications: ExpiryNotificationService,
         coordinator: InventoryCoordinator,
+        recalls: RecallStore? = nil,
         now: @escaping () -> Date = { .now }
     ) {
         self.store = store
         self.settings = settings
         self.notifications = notifications
         self.coordinator = coordinator
+        self.recalls = recalls
         self.now = now
     }
 
@@ -76,6 +79,18 @@ final class InventoryViewModel {
             if !query.isEmpty, !item.name.lowercased().contains(query) { return false }
             return true
         }
+    }
+
+    /// Fridge items that may be affected by a current FSA recall, most confident first.
+    var recallMatches: [RecallMatch] {
+        guard let recalls, settings.recallChecksEnabled else { return [] }
+        return recalls.matches(for: items, now: now())
+    }
+
+    var recalledItemIDs: Set<UUID> { Set(recallMatches.map(\.itemID)) }
+
+    func showRecalledItem(_ match: RecallMatch) {
+        coordinator.showItem(id: match.itemID)
     }
 
     /// The single most urgent item, highlighted above the grid while browsing (not searching).

@@ -21,11 +21,24 @@ struct FoodItemCard: View {
     let item: FoodItem
     var soonThresholdDays = 3
     var now: Date = .now
+    /// A current FSA alert may concern this item.
+    var isRecallFlagged = false
 
     var body: some View {
         let status = item.status(soonThresholdDays: soonThresholdDays, now: now)
         VStack(alignment: .leading, spacing: 0) {
-            IconTile(symbol: item.category.symbol, tint: status.tint)
+            HStack(alignment: .top) {
+                IconTile(symbol: item.category.symbol, tint: status.tint)
+                Spacer()
+                if isRecallFlagged {
+                    Label("Recall?", systemImage: "exclamationmark.triangle.fill")
+                        .font(.app(.caption2, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 6)
+                        .padding(.vertical, 3)
+                        .background(Constants.StatusExpired, in: RoundedRectangle(cornerRadius: Radius.control))
+                }
+            }
             Text(item.name)
                 .font(.app(.subheadline, weight: .semibold))
                 .foregroundStyle(Constants.TextPrimary)
@@ -44,7 +57,7 @@ struct FoodItemCard: View {
             .font(.app(.caption))
             .padding(.top, 2)
         }
-        .cardStyle(accent: status.needsAttention ? status.tint : nil)
+        .cardStyle(accent: isRecallFlagged ? Constants.StatusExpired : (status.needsAttention ? status.tint : nil))
         .accessibilityElement(children: .combine)
     }
 }

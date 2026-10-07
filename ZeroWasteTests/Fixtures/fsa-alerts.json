@@ -1,0 +1,895 @@
+{
+ "meta": {
+  "@id": "http://data.food.gov.uk/food-alerts/id.json?_view=full&_sort=-created&_limit=200&min-created=2026-04-01",
+  "publisher": "Food Standards Agency",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "licenseName": "OGL 3",
+  "comment": "Updated beta-service, API backward compatible",
+  "version": "2.0.1",
+  "hasFormat": [
+   "http://data.food.gov.uk/food-alerts/id.csv?_limit=200&_sort=-created&_view=full&min-created=2026-04-01",
+   "http://data.food.gov.uk/food-alerts/id.geojson?_limit=200&_sort=-created&_view=full&min-created=2026-04-01",
+   "http://data.food.gov.uk/food-alerts/id.html?_limit=200&_sort=-created&_view=full&min-created=2026-04-01",
+   "http://data.food.gov.uk/food-alerts/id.json?_limit=200&_sort=-created&_view=full&min-created=2026-04-01",
+   "http://data.food.gov.uk/food-alerts/id.rdf?_limit=200&_sort=-created&_view=full&min-created=2026-04-01",
+   "http://data.food.gov.uk/food-alerts/id.ttl?_limit=200&_sort=-created&_view=full&min-created=2026-04-01"
+  ],
+  "limit": 200
+ },
+ "items": [
+  {
+   "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-43-2026",
+   "notation": "FSA-AA-43-2026",
+   "title": "Unilever recalls Pot Noodle Piri Piri Chicken Flavour because of undeclared milk",
+   "description": "Unilever is recalling Pot Noodle Piri Piri Chicken Flavour because it contains milk which is not declared on the label.\n\nThe following information can be found printed on the foil lid.",
+   "created": "2026-10-02",
+   "modified": "2026-10-02T16:39:31.821Z",
+   "type": [
+    "http://data.food.gov.uk/food-alerts/def/AA",
+    "http://data.food.gov.uk/food-alerts/def/Alert"
+   ],
+   "reportingBusiness": {
+    "commonName": "Unilever"
+   },
+   "SMStext": "Unilever recalls Pot Noodle Piri Piri Chicken Flavour because of undeclared milk https://bit.ly/46THKQX",
+   "twitterText": "Unilever recalls Pot Noodle Piri Piri Chicken Flavour because of undeclared milk #FoodAllergy https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-43-2026",
+   "shortTitle": "Pot Noodle Piri Piri Chicken Flavour recalled",
+   "alertURL": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-43-2026",
+   "shortURL": "https://bit.ly/46THKQX",
+   "actionTaken": "Unilever is recalling the above product from customers and has\u00a0been\u00a0advised to\u00a0contact\u00a0the relevant allergy support organisations, which will tell their members about the recall.\u00a0The company has also issued a point-of-sale notice to its customers. These notices explain to customers why the product is being recalled and tell them what to do if they have bought the product. Please see the attached notice.\u00a0",
+   "consumerAdvice": "If you have bought the above product and have an allergy to milk do not eat it. Instead, please return it to the store from where it was bought for a full refund. Alternatively please contact Unilever Consumer Care Line at ukicare@unilever.com or call them on 0800 146 252.",
+   "relatedMedia": [
+    {
+     "@id": "https://s3-eu-west-1.amazonaws.com/fsa-alerts-files/production/FSA-AA-43-2026/FSA-AA-43-2026-Unilever-recalls-Pot-Noodle-Piri-Piri-Chicken-Flavour-because-of-undeclared-milk-PDF.pdf",
+     "title": "Customer notice: Pot Noodle Piri Piri Chicken Flavour"
+    }
+   ],
+   "problem": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-43-2026/problem/0",
+     "riskStatement": "Milk\nThis product contains milk making it a possible health risk for anyone with an allergy to milk or intolerance to\u00a0milk\u00a0or milk constituents.",
+     "allergen": [
+      {
+       "@id": "http://data.food.gov.uk/codes/alerts/def/allergen/milk",
+       "label": "Milk",
+       "notation": "milk",
+       "riskStatement": "This product contains Milk making it a possible health risk for anyone with an allergy or intolerance to milk or milk constituents",
+       "type": [
+        "http://data.food.gov.uk/food-alerts/def/Allergen",
+        "http://www.w3.org/2004/02/skos/core#Concept"
+       ],
+       "prefLabel": "Milk",
+       "topConceptOf": "http://data.food.gov.uk/codes/alerts/def/allergen",
+       "inScheme": "http://data.food.gov.uk/codes/alerts/def/allergen",
+       "description": "Milk is a common ingredient in butter, cheese, cream, milk powders and yoghurt. It can also be found in foods brushed or glazed with milk, and in powdered soups and sauces",
+       "relatedFoodTypes": "http://data.food.gov.uk/codes/foodtype/id/A0BXZ"
+      }
+     ]
+    }
+   ],
+   "productDetails": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-43-2026/productDetails/0",
+     "productName": "Pot Noodle Piri Piri Chicken Flavour",
+     "packSizeDescription": "90g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-43-2026/productDetails/0/batch/0",
+       "bestBeforeDescription": "May 2027",
+       "batchCode": "L6232PB796"
+      }
+     ]
+    }
+   ],
+   "status": {
+    "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+    "label": "Published"
+   }
+  },
+  {
+   "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-47-2026-update-1",
+   "notation": "FSA-PRIN-47-2026-update-1",
+   "title": "Updated: World of Sweets recalls Alyan Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate and Alyan Dubai Style Chocolate Truffles because of contamination with Salmonella",
+   "description": "World of Sweets is recalling Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate and Alyan Dubai Style Chocolate Truffles because Salmonella has been found in the products.\n\nThis recall has been updated to cover Wales and Scotland (in addition to England and Northern Ireland).",
+   "created": "2026-09-25",
+   "modified": "2026-09-25T13:00:40.592Z",
+   "type": [
+    "http://data.food.gov.uk/food-alerts/def/Alert",
+    "http://data.food.gov.uk/food-alerts/def/PRIN"
+   ],
+   "previousAlert": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-47-2026",
+   "reportingBusiness": {
+    "commonName": "World of Sweets"
+   },
+   "SMStext": "Updated: World of Sweets recalls two Alyan Dubai Style chocolate products https://bit.ly/4yqJoW0",
+   "twitterText": "Updated: World of Sweets recalls Alyan Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate and Alyan Dubai Style Chocolate Truffles because of contamination with Salmonella #FoodAlert https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-47-2026-update-1",
+   "alertURL": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-47-2026-update-1",
+   "shortURL": "https://bit.ly/4yqJoW0",
+   "actionTaken": "World of Sweets is recalling the above products. Point of sale notices will be displayed in all retail stores that are selling these products. These notices explain to customers why the products are being recalled and tell them what to do if they have bought the product. Please see the attached notice.",
+   "consumerAdvice": "If you have bought any of the above products do not eat it. Instead, return it to the store from where it was bought for a full refund.",
+   "relatedMedia": [
+    {
+     "@id": "https://s3-eu-west-1.amazonaws.com/fsa-alerts-files/production/FSA-PRIN-47-2026-update-1/Customer-notice-World-of-Sweets-recalls-Alyan-Dubai-Style-Crunchy-Knafeh-and-Pistachio-Milk-Chocolate-because-of-possible-contamination-with-SalmonellaDocument-update.pdf",
+     "title": "Customer notice: Alyan Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate and Alyan Dubai Style Chocolate Truffles"
+    }
+   ],
+   "problem": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-47-2026-update-1/problem/0",
+     "riskStatement": "The presence of salmonella in the products listed above.\u00a0\u00a0\u00a0\nSymptoms caused by salmonella usually include fever, diarrhoea and abdominal cramps.\u00a0If you are experiencing these symptoms, you should stay away from work, school or nursery until you have stopped having symptoms for at least 48 hours to avoid passing it on to others.",
+     "pathogenRisk": {
+      "@id": "http://data.food.gov.uk/codes/alerts/def/pathogen-risk/salmonella-contamination",
+      "label": [
+       "Contamination of product with salmonella",
+       "Contamination of product with salmonella"
+      ],
+      "notation": "salmonella-contamination",
+      "riskStatement": [
+       "The presence of salmonella in the product(s) listed below.\nSymptoms caused by salmonella usually include fever, diarrhoea and abdominal cramps.",
+       "The presence of salmonella in the product(s) listed below.\nSymptoms caused by salmonella usually include fever, diarrhoea and abdominal cramps."
+      ],
+      "pathogen": "http://data.food.gov.uk/codes/alerts/def/pathogen/salmonella",
+      "type": [
+       "http://data.food.gov.uk/food-alerts/def/PathogenRisk",
+       "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "prefLabel": [
+       "Contamination of product with salmonella",
+       "Contamination of product with salmonella"
+      ],
+      "inScheme": [
+       "http://data.food.gov.uk/codes/alerts/def/pathogen-risk",
+       "http://data.food.gov.uk/codes/alerts/def/pathogen-risk/scheme"
+      ]
+     }
+    }
+   ],
+   "productDetails": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-47-2026-update-1/productDetails/0",
+     "productName": "Alyan Dubai Style Chocolate Truffles",
+     "productCode": "319456",
+     "packSizeDescription": "120g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-47-2026-update-1/productDetails/0/batch/0",
+       "bestBeforeDescription": "All best before dates"
+      }
+     ]
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-47-2026-update-1/productDetails/1",
+     "productName": "Alyan Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate",
+     "productCode": "318591",
+     "packSizeDescription": "100g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-47-2026-update-1/productDetails/1/batch/0",
+       "bestBeforeDescription": "All best before dates"
+      }
+     ]
+    }
+   ],
+   "status": {
+    "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+    "label": "Published"
+   }
+  },
+  {
+   "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-35-2026",
+   "notation": "FSA-AA-35-2026",
+   "title": "Dundeis UK Ltd recalls Minton & Donello Organic White Orzo because of undeclared wheat (gluten)",
+   "description": "Dundeis UK Ltd is recalling Minton & Donello Organic White Orzo because it contains wheat (gluten) which is not mentioned on the label or the ingredients list on the back of the pack.",
+   "created": "2026-07-03",
+   "modified": "2026-07-03T14:34:28.318Z",
+   "type": [
+    "http://data.food.gov.uk/food-alerts/def/AA",
+    "http://data.food.gov.uk/food-alerts/def/Alert"
+   ],
+   "reportingBusiness": {
+    "commonName": "Dundeis UK Ltd"
+   },
+   "SMStext": "Dundeis UK Ltd recalls Minton & Donello Organic White Orzo because of undeclared wheat (gluten) https://bit.ly/4eRx8FC",
+   "twitterText": "Dundeis UK Ltd recalls Minton & Donello Organic White Orzo because of undeclared wheat (gluten) #FoodAllergy https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-35-2026",
+   "shortTitle": "Dundeis UK Ltd recalls Minton & Donello Organic White Orzo",
+   "alertURL": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-35-2026",
+   "shortURL": "https://bit.ly/4eRx8FC",
+   "actionTaken": "Dundeis UK Ltd is recalling the above product from customers and has contacted the relevant allergy support organisations, which will tell their members about the recall. The company has also issued a point-of-sale notice to its customers. These notices explain to customers why the product is being recalled and tell them what to do if they have bought the product. Please see the attached notice.",
+   "consumerAdvice": "If you have bought the above product and have an allergy or intolerance\u00a0to\u00a0wheat or gluten\u00a0or with coeliac disease, do not eat it. Instead return it to the store from where it was bought for a full refund.",
+   "relatedMedia": [
+    {
+     "@id": "https://s3-eu-west-1.amazonaws.com/fsa-alerts-files/production/FSA-AA-35-2026/26-07-03-Dundeis-UK-Ltd-Recalls-White-Orzo.pdf",
+     "title": "Customer notice: Dundeis UK Ltd recalls Minton & Donello Organic White Orzo"
+    }
+   ],
+   "problem": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-35-2026/problem/0",
+     "riskStatement": "Wheat (gluten)\u00a0\n\u00a0\nThis product\u00a0contains\u00a0wheat\u00a0making it a\u00a0possible\u00a0health\u00a0risk for anyone with\u00a0an\u00a0allergy or intolerance to\u00a0wheat or gluten\u00a0or with coeliac disease.\u00a0",
+     "allergen": [
+      {
+       "@id": "http://data.food.gov.uk/codes/alerts/def/allergen/gluten",
+       "label": "Gluten",
+       "notation": "gluten",
+       "riskStatement": "This product contains Gluten making it a possible health risk for anyone with an allergy or intolerance to gluten",
+       "type": [
+        "http://data.food.gov.uk/food-alerts/def/Allergen",
+        "http://www.w3.org/2004/02/skos/core#Concept"
+       ],
+       "prefLabel": "Gluten",
+       "altLabel": "Cereals containing gluten",
+       "narrower": [
+        "http://data.food.gov.uk/codes/alerts/def/allergen/barley",
+        "http://data.food.gov.uk/codes/alerts/def/allergen/oats",
+        "http://data.food.gov.uk/codes/alerts/def/allergen/rye",
+        "http://data.food.gov.uk/codes/alerts/def/allergen/wheat"
+       ],
+       "topConceptOf": "http://data.food.gov.uk/codes/alerts/def/allergen",
+       "inScheme": "http://data.food.gov.uk/codes/alerts/def/allergen",
+       "description": "Cereals containing gluten - Wheat (such as spelt and Khorasan wheat/Kamut), rye, barley and oats is often found in foods containing flour, such as some types of baking powder, batter, breadcrumbs, bread, cakes, couscous, meat products, pasta, pastry, sauces, soups and fried foods which are dusted with flour"
+      },
+      {
+       "@id": "http://data.food.gov.uk/codes/alerts/def/allergen/wheat",
+       "label": "Wheat",
+       "notation": "wheat",
+       "riskStatement": "This product contains Wheat making it a possible health risk for anyone with an allergy or intolerance to wheat or gluten",
+       "type": [
+        "http://data.food.gov.uk/food-alerts/def/Allergen",
+        "http://www.w3.org/2004/02/skos/core#Concept"
+       ],
+       "prefLabel": "Wheat",
+       "broader": "http://data.food.gov.uk/codes/alerts/def/allergen/gluten",
+       "inScheme": "http://data.food.gov.uk/codes/alerts/def/allergen",
+       "relatedFoodTypes": "http://data.food.gov.uk/codes/foodtype/id/A001M"
+      }
+     ]
+    }
+   ],
+   "productDetails": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-35-2026/productDetails/0",
+     "productName": "Minton & Donello Organic White Orzo",
+     "packSizeDescription": "500g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-35-2026/productDetails/0/batch/0",
+       "bestBeforeDescription": "31 January 2027 02 May 2027 24 May 2027",
+       "batchCode": "78850 78850 78850"
+      }
+     ]
+    }
+   ],
+   "status": {
+    "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+    "label": "Published"
+   },
+   "country": [
+    {
+     "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-ENG",
+     "label": [
+      "England",
+      "England"
+     ],
+     "type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+     ],
+     "seeAlso": "http://statistics.data.gov.uk/id/statistical-geography/E92000001",
+     "description": "England (GB-ENG) - Unitied Kingdom Country: England",
+     "broader": "http://data.food.gov.uk/codes/geographies/countries/other",
+     "inScheme": "http://data.food.gov.uk/codes/geographies/countries"
+    },
+    {
+     "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-WLS",
+     "label": [
+      "Wales",
+      "Wales"
+     ],
+     "type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+     ],
+     "seeAlso": "http://statistics.data.gov.uk/id/statistical-geography/W92000004",
+     "description": "Wales (GB-WLS) - Unitied Kingdom Country: Wales",
+     "broader": "http://data.food.gov.uk/codes/geographies/countries/other",
+     "inScheme": "http://data.food.gov.uk/codes/geographies/countries"
+    }
+   ]
+  },
+  {
+   "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026",
+   "notation": "FSA-PRIN-32-2026",
+   "title": "O\u2019Brien Fine Foods recalls ham products because of possible contamination with Listeria monocytogenes",
+   "description": "O\u2019Brien Fine Foods are recalling ham products because of possible contamination with Listeria monocytogenes.",
+   "created": "2026-07-01",
+   "modified": "2026-07-01T15:32:06.912Z",
+   "type": [
+    "http://data.food.gov.uk/food-alerts/def/Alert",
+    "http://data.food.gov.uk/food-alerts/def/PRIN"
+   ],
+   "reportingBusiness": {
+    "commonName": "O\u2019Brien Fine Foods"
+   },
+   "SMStext": "O\u2019Brien Fine Foods recalls ham products because of possible contamination with Listeria monocytogenes https://bit.ly/4eDicMy",
+   "twitterText": "O\u2019Brien Fine Foods recalls ham products because of possible contamination with Listeria monocytogenes #FoodAlert https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-32-2026",
+   "alertURL": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-32-2026",
+   "shortURL": "https://bit.ly/4eDicMy",
+   "actionTaken": "O\u2019Brien Fine Foods are recalling the above products. Point of sale notices will be displayed in all retail stores that are selling these products. These notices explain to customers why the products are being recalled and tell them what to do if they have bought the products. Please see the attached notices.",
+   "consumerAdvice": "If you have bought the above products, do not eat them. Instead, return them to where you bought them from for a full refund.",
+   "relatedMedia": [
+    {
+     "@id": "https://s3-eu-west-1.amazonaws.com/fsa-alerts-files/production/FSA-PRIN-32-2026/Point-of-sale-notice-Customer-notice-OBriens-ham-products.pdf",
+     "title": "Point-of-sale-notice - Customer notice: O'Briens ham products"
+    }
+   ],
+   "problem": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/problem/0",
+     "riskStatement": "\u00a0The possible presence of Listeria monocytogenes in the products listed above. Symptoms caused by Listeria monocytogenes can be similar to flu and include high temperature, muscle ache or pain, chills, feeling or being sick and diarrhoea. However, in rare cases, the infection can be more severe, causing serious complications, such as meningitis. Some people are more vulnerable to listeria infections, including those over 65 years of age, pregnant women and their unborn babies, babies less than one month old and people with weakened immune systems.",
+     "pathogenRisk": {
+      "@id": "http://data.food.gov.uk/codes/alerts/def/pathogen-risk/possible-listeria-contamination",
+      "label": [
+       "Possible contamination of product with Listeria monocytogenes",
+       "Possible contamination of product with Listeria monocytogenes"
+      ],
+      "notation": "possible-listeria-contamination",
+      "riskStatement": [
+       "The product(s) listed below might be contaminated with Listeria monocytogenes.\nSymptoms caused by this organism can be similar to flu and include high temperature, muscle ache or pain, chills, feeling or being sick and diarrhoea.\nSome people are more vulnerable to listeria infections, including those over 65 years of age, pregnant women and their unborn babies, babies less than one month old and people with weakened immune systems.",
+       "The product(s) listed below might be contaminated with Listeria monocytogenes.\nSymptoms caused by this organism can be similar to flu and include high temperature, muscle ache or pain, chills, feeling or being sick and diarrhoea.\nSome people are more vulnerable to listeria infections, including those over 65 years of age, pregnant women and their unborn babies, babies less than one month old and people with weakened immune systems."
+      ],
+      "pathogen": "http://data.food.gov.uk/codes/alerts/def/pathogen/listeria",
+      "type": [
+       "http://data.food.gov.uk/food-alerts/def/PathogenRisk",
+       "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "prefLabel": [
+       "Possible contamination of product with Listeria monocytogenes",
+       "Possible contamination of product with Listeria monocytogenes"
+      ],
+      "inScheme": [
+       "http://data.food.gov.uk/codes/alerts/def/pathogen-risk",
+       "http://data.food.gov.uk/codes/alerts/def/pathogen-risk/scheme"
+      ]
+     }
+    }
+   ],
+   "productDetails": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/productDetails/0",
+     "productName": "Brady Family Crumb Irish Ham",
+     "packSizeDescription": "80g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/productDetails/0/batch/0",
+       "useByDescription": "16 July 2026",
+       "batchCode": "235880"
+      },
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/productDetails/0/batch/1",
+       "useByDescription": "16 July 2026",
+       "batchCode": "235765"
+      }
+     ]
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/productDetails/1",
+     "productName": "Deluxe Honey Roast Carved Irish Ham",
+     "packSizeDescription": "130g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/productDetails/1/batch/0",
+       "useByDescription": "16 July 2026",
+       "batchCode": "235473"
+      }
+     ]
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/productDetails/2",
+     "productName": "Deluxe Triple Oak Smoked Carved Irish Ham",
+     "packSizeDescription": "130g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-32-2026/productDetails/2/batch/0",
+       "useByDescription": "16 July 2026",
+       "batchCode": "235461"
+      }
+     ]
+    }
+   ],
+   "status": {
+    "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+    "label": "Published"
+   },
+   "country": [
+    {
+     "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-NIR",
+     "label": [
+      "Northern Ireland",
+      "Northern Ireland"
+     ],
+     "type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+     ],
+     "seeAlso": "http://statistics.data.gov.uk/id/statistical-geography/N92000002",
+     "description": "Northern Ireland (GB-NIR) - Unitied Kingdom Country: Northern Ireland",
+     "broader": "http://data.food.gov.uk/codes/geographies/countries/other",
+     "inScheme": "http://data.food.gov.uk/codes/geographies/countries"
+    }
+   ]
+  },
+  {
+   "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-28-2026",
+   "notation": "FSA-PRIN-28-2026",
+   "title": "Traditional Cheese Company recalls French Bries because of contamination with Listeria monocytogenes",
+   "description": "Traditional Cheese Company is recalling French Bries because they contain Listeria monocytogenes.",
+   "created": "2026-06-19",
+   "modified": "2026-06-19T17:20:58.542Z",
+   "type": [
+    "http://data.food.gov.uk/food-alerts/def/Alert",
+    "http://data.food.gov.uk/food-alerts/def/PRIN"
+   ],
+   "reportingBusiness": {
+    "commonName": "Traditional Cheese Company"
+   },
+   "SMStext": "Traditional Cheese Company recalls French Bries because of contamination with Listeria monocytogenes https://bit.ly/4xUe2HM",
+   "twitterText": "Traditional Cheese Company recalls French Bries because of contamination with Listeria monocytogenes #FoodAlert https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-28-2026",
+   "shortTitle": "Traditional Cheese Company recalls French Bries",
+   "alertURL": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-28-2026",
+   "shortURL": "https://bit.ly/4xUe2HM",
+   "actionTaken": "Traditional Cheese Company is recalling the above products. Point of sale notices will be displayed in all retail stores that are selling the products. These notices explain to customers why the products are being recalled and tell them what to do if they have bought the products. Please see the attached notices.",
+   "consumerAdvice": "If you have bought any of the above products, do not eat them. Instead, return them to where you bought them from for a full refund.",
+   "relatedMedia": [
+    {
+     "@id": "https://s3-eu-west-1.amazonaws.com/fsa-alerts-files/production/FSA-PRIN-28-2026/FSA-PRIN-28-2026-Traditional-Cheese-Company-recalls-French-Bries-because-of-contamination-with-Listeria-monocytogenes-PDF.pdf",
+     "title": "Customer notice: Traditional Cheese Company French Brie and Dunnes Stores Velvety & Mild French Brie"
+    }
+   ],
+   "problem": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-28-2026/problem/0",
+     "riskStatement": "The presence of Listeria monocytogenes in the products listed above. Symptoms caused by Listeria monocytogenes can be similar to flu and include high temperature, muscle ache or pain, chills, feeling or being sick and diarrhoea. However, in rare cases, the infection can be more severe, causing serious complications, such as meningitis. Some people are more vulnerable to listeria infections, including those over 65 years of age, pregnant women and their unborn babies, babies less than one month old and people with weakened immune systems.",
+     "pathogenRisk": {
+      "@id": "http://data.food.gov.uk/codes/alerts/def/pathogen-risk/listeria-contamination",
+      "label": [
+       "Contamination of product with Listeria monocytogenes",
+       "Contamination of product with Listeria monocytogenes"
+      ],
+      "notation": "listeria-contamination",
+      "riskStatement": [
+       "The presence of Listeria monocytogenes in the product(s) listed below. Symptoms caused by this organism can be similar to flu and include high temperature, muscle ache or pain, chills, feeling or being sick and diarrhoea. However, in rare cases, the infection can be more severe, causing serious complications, such as meningitis.\nSome people are more vulnerable to listeria infections, including those over 65 years of age, pregnant women and their unborn babies, babies less than one month old and people with weakened immune systems.",
+       "The presence of Listeria monocytogenes in the product(s) listed below. Symptoms caused by this organism can be similar to flu and include high temperature, muscle ache or pain, chills, feeling or being sick and diarrhoea. However, in rare cases, the infection can be more severe, causing serious complications, such as meningitis.\nSome people are more vulnerable to listeria infections, including those over 65 years of age, pregnant women and their unborn babies, babies less than one month old and people with weakened immune systems."
+      ],
+      "pathogen": "http://data.food.gov.uk/codes/alerts/def/pathogen/listeria",
+      "type": [
+       "http://data.food.gov.uk/food-alerts/def/PathogenRisk",
+       "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "prefLabel": [
+       "Contamination of product with Listeria monocytogenes",
+       "Contamination of product with Listeria monocytogenes"
+      ],
+      "inScheme": "http://data.food.gov.uk/codes/alerts/def/pathogen-risk/scheme"
+     }
+    }
+   ],
+   "productDetails": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-28-2026/productDetails/0",
+     "productName": "Dunnes Stores Velvety & Mild French Brie",
+     "packSizeDescription": "170g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-28-2026/productDetails/0/batch/0",
+       "useByDescription": "10 July 2026, 16 July 2026, and 17 July 2026",
+       "batchCode": "5099874213772"
+      }
+     ]
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-28-2026/productDetails/1",
+     "productName": "Traditional Cheese Company French Brie",
+     "packSizeDescription": "160g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-28-2026/productDetails/1/batch/0",
+       "useByDescription": "17 July 2026",
+       "batchCode": "5099318001392"
+      }
+     ]
+    }
+   ],
+   "status": {
+    "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+    "label": "Published"
+   },
+   "country": [
+    {
+     "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-NIR",
+     "label": [
+      "Northern Ireland",
+      "Northern Ireland"
+     ],
+     "type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+     ],
+     "seeAlso": "http://statistics.data.gov.uk/id/statistical-geography/N92000002",
+     "description": "Northern Ireland (GB-NIR) - Unitied Kingdom Country: Northern Ireland",
+     "broader": "http://data.food.gov.uk/codes/geographies/countries/other",
+     "inScheme": "http://data.food.gov.uk/codes/geographies/countries"
+    }
+   ]
+  },
+  {
+   "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-27-2026",
+   "notation": "FSA-AA-27-2026",
+   "title": "Sunrise International Foods Ltd recalls Shama Falooda Almond flavour drink because of undeclared milk",
+   "description": "Sunrise International Foods Ltd is recalling Shama Falooda Almond flavour drink because it contains milk which is not\u00a0mentioned\u00a0on the label.\u00a0",
+   "created": "2026-05-22",
+   "modified": "2026-05-22T15:30:08.699Z",
+   "type": [
+    "http://data.food.gov.uk/food-alerts/def/AA",
+    "http://data.food.gov.uk/food-alerts/def/Alert"
+   ],
+   "reportingBusiness": {
+    "commonName": "Sunrise International Foods Ltd"
+   },
+   "SMStext": "Sunrise International Foods Ltd recalls Shama Falooda Almond flavour drink because of undeclared milk https://bit.ly/4dUJygF",
+   "twitterText": "Sunrise International Foods Ltd recalls Shama Falooda Almond flavour drink because of undeclared milk https://www.food.gov.uk/news-alerts/alert/fsa-aa-27-2026",
+   "alertURL": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-27-2026",
+   "shortURL": "https://bit.ly/4dUJygF",
+   "actionTaken": "Sunrise International Foods Ltd is recalling the above product from customers and has\u00a0been\u00a0advised to\u00a0contact\u00a0the relevant allergy support organisations, which will tell their members about the recall.\u00a0The company has also issued a point-of-sale notice to its customers. These notices explain to customers why the product is being recalled and tell them what to do if they have bought the product. Please see the attached notice.\u00a0",
+   "consumerAdvice": "If you have bought the above product and have an allergy to milk do not drink it. Instead, please return it to the store where it was bought from for a full refund. No receipt is required. For further information call 07908 096126 or e-mail m.ali@shamauk.com.",
+   "relatedMedia": [
+    {
+     "@id": "https://s3-eu-west-1.amazonaws.com/fsa-alerts-files/production/FSA-AA-27-2026/FSA-AA-27-2026-POSN.pdf",
+     "title": "Customer notice: Shama Falooda Almond flavour drink"
+    }
+   ],
+   "problem": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-27-2026/problem/0",
+     "riskStatement": "Milk\nThis product contains milk making it a possible health risk for anyone with an allergy to milk or intolerance to\u00a0milk\u00a0or milk constituents.",
+     "allergen": [
+      {
+       "@id": "http://data.food.gov.uk/codes/alerts/def/allergen/milk",
+       "label": "Milk",
+       "notation": "milk",
+       "riskStatement": "This product contains Milk making it a possible health risk for anyone with an allergy or intolerance to milk or milk constituents",
+       "type": [
+        "http://data.food.gov.uk/food-alerts/def/Allergen",
+        "http://www.w3.org/2004/02/skos/core#Concept"
+       ],
+       "prefLabel": "Milk",
+       "topConceptOf": "http://data.food.gov.uk/codes/alerts/def/allergen",
+       "inScheme": "http://data.food.gov.uk/codes/alerts/def/allergen",
+       "description": "Milk is a common ingredient in butter, cheese, cream, milk powders and yoghurt. It can also be found in foods brushed or glazed with milk, and in powdered soups and sauces",
+       "relatedFoodTypes": "http://data.food.gov.uk/codes/foodtype/id/A0BXZ"
+      }
+     ]
+    }
+   ],
+   "productDetails": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-27-2026/productDetails/0",
+     "productName": "Shama Falooda Almond flavour drink",
+     "packSizeDescription": "290 ml",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-27-2026/productDetails/0/batch/0",
+       "bestBeforeDescription": "All date codes",
+       "batchCode": "All batches"
+      }
+     ]
+    }
+   ],
+   "status": {
+    "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+    "label": "Published"
+   },
+   "country": [
+    {
+     "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-ENG",
+     "label": [
+      "England",
+      "England"
+     ],
+     "type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+     ],
+     "seeAlso": "http://statistics.data.gov.uk/id/statistical-geography/E92000001",
+     "description": "England (GB-ENG) - Unitied Kingdom Country: England",
+     "broader": "http://data.food.gov.uk/codes/geographies/countries/other",
+     "inScheme": "http://data.food.gov.uk/codes/geographies/countries"
+    }
+   ]
+  },
+  {
+   "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026",
+   "notation": "FSA-PRIN-17-2026",
+   "title": "FNM Bakery Limited recalls various First National Bakery products because of potential rodent contamination",
+   "description": "FNM Bakery Limited is recalling various of their First National Bakery brand products because of potential rodent contamination at the bakery manufacturing site.",
+   "created": "2026-04-13",
+   "modified": "2026-04-13T15:40:56.697Z",
+   "type": [
+    "http://data.food.gov.uk/food-alerts/def/Alert",
+    "http://data.food.gov.uk/food-alerts/def/PRIN"
+   ],
+   "reportingBusiness": {
+    "commonName": "FNM Bakery Limited"
+   },
+   "SMStext": "FNM Bakery Limited recalls various First National Bakery products because of potential rodent contamination https://bit.ly/4mqxSoH",
+   "twitterText": "FNM Bakery Limited recalls various First National Bakery products because of potential rodent contamination #FoodAlert https://www.food.gov.uk/news-alerts/alert/fsa-prin-17-2026",
+   "shortTitle": "FNM Bakery Limited recalls First National Bakery products",
+   "alertURL": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-17-2026",
+   "shortURL": "https://bit.ly/4mqxSoH",
+   "actionTaken": "FNM Bakery Limited is recalling the above First National Bakery products. Point of sale notices will be displayed in retail stores that are selling these products. These notices explain to customers why the products are being recalled and tell them what to do if they have bought the products. Please see the attached notice.",
+   "consumerAdvice": "If you have bought the above products, do not eat them. Instead, return them to where you bought them from for a full refund. For more information email Caribbean.bakers@yahoo.com or call 0121 553 5117.",
+   "relatedMedia": [
+    {
+     "@id": "https://s3-eu-west-1.amazonaws.com/fsa-alerts-files/production/FSA-PRIN-17-2026/FSA-PRIN-17-2026-FNM-Bakery-Limited-recalls-various-First-National-Bakery-products-because-of-potential-rodent-contamination.pdf",
+     "title": "Customer notice: FNM Bakery Limited First National Bakery Products"
+    }
+   ],
+   "problem": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/problem/0",
+     "riskStatement": "These products may be contaminated by rodents making them unsafe to eat."
+    }
+   ],
+   "productDetails": [
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/0",
+     "productName": "First National Bakery Bulla Bread",
+     "packSizeDescription": "No size",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/0/batch/0",
+       "bestBeforeDescription": "end of 27 April 2026",
+       "batchCode": "62d"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/0/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/1",
+     "productName": "First National Bakery Coco Bread",
+     "packSizeDescription": "No size",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/1/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "59a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/1/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/10",
+     "productName": "First National Bakery Shilling (Small Bread)",
+     "packSizeDescription": "400g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/10/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/10/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/11",
+     "productName": "First National Bakery Large Sliced Square",
+     "packSizeDescription": "1200g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/11/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/11/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/12",
+     "productName": "First National Bakery Medium Sliced Square",
+     "packSizeDescription": "800g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/12/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/12/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/13",
+     "productName": "First National Bakery Large Unsliced Square",
+     "packSizeDescription": "1200g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/13/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/13/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/14",
+     "productName": "First National Bakery Medium Unsliced Square",
+     "packSizeDescription": "800g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/14/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/14/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/15",
+     "productName": "First National Bakery Mongoose",
+     "packSizeDescription": "1000g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/15/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/15/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/16",
+     "productName": "First National Bakery Twist",
+     "packSizeDescription": "1000g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/16/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/16/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/17",
+     "productName": "First National Bakery Wing",
+     "packSizeDescription": "1000g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/17/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "62a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/17/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/2",
+     "productName": "First National Bakery Corn Bread",
+     "packSizeDescription": "No size",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/2/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "61e"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/2/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/3",
+     "productName": "First National Bakery Large Bun",
+     "packSizeDescription": "800g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/3/batch/0",
+       "bestBeforeDescription": "end of 05 May 2026",
+       "batchCode": "57c"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/3/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/4",
+     "productName": "First National Bakery Bun Cob",
+     "packSizeDescription": "400g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/4/batch/0",
+       "bestBeforeDescription": "end of 05 May 2026",
+       "batchCode": "56c"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/4/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/5",
+     "productName": "First National Bakery Medium Bun",
+     "packSizeDescription": "600g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/5/batch/0",
+       "bestBeforeDescription": "end of 05 May 2026",
+       "batchCode": "57c"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/5/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/6",
+     "productName": "First National Bakery Wholemeal Sliced Bread",
+     "packSizeDescription": "1100g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/6/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "59b"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/6/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/7",
+     "productName": "First National Bakery Wholemeal Unsliced Bread",
+     "packSizeDescription": "1100g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/7/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "59b"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/7/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/8",
+     "productName": "First National Bakery Hi Top Unsliced Bread",
+     "packSizeDescription": "1000g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/8/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "59a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/8/productCategory"
+    },
+    {
+     "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/9",
+     "productName": "First National Bakery Hi Top Sliced Bread,",
+     "packSizeDescription": "1000g",
+     "batchDescription": [
+      {
+       "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/9/batch/0",
+       "bestBeforeDescription": "end of 28 April 2026",
+       "batchCode": "59a"
+      }
+     ],
+     "productCategory": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-17-2026/productDetails/9/productCategory"
+    }
+   ],
+   "status": {
+    "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+    "label": "Published"
+   },
+   "country": [
+    {
+     "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-ENG",
+     "label": [
+      "England",
+      "England"
+     ],
+     "type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+     ],
+     "seeAlso": "http://statistics.data.gov.uk/id/statistical-geography/E92000001",
+     "description": "England (GB-ENG) - Unitied Kingdom Country: England",
+     "broader": "http://data.food.gov.uk/codes/geographies/countries/other",
+     "inScheme": "http://data.food.gov.uk/codes/geographies/countries"
+    }
+   ]
+  }
+ ]
+}

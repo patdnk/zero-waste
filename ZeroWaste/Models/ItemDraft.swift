@@ -17,6 +17,7 @@ struct ItemDraft: Hashable, Sendable {
     var expiresAt: Date
     var notes = ""
     var barcode: String?
+    var brand: String?
 
     static let unitSuggestions = ["pcs", "g", "kg", "ml", "l", "pack", "slices"]
 
@@ -33,6 +34,7 @@ struct ItemDraft: Hashable, Sendable {
         expiresAt = item.expiresAt
         notes = item.notes
         barcode = item.barcode
+        brand = item.brand
     }
 
     var trimmedName: String { name.trimmingCharacters(in: .whitespacesAndNewlines) }
@@ -48,6 +50,7 @@ struct ItemDraft: Hashable, Sendable {
             addedAt: now,
             expiresAt: expiresAt,
             barcode: barcode,
+            brand: brand,
             notes: notes
         )
     }
@@ -61,5 +64,6 @@ struct ItemDraft: Hashable, Sendable {
         item.expiresAt = expiresAt
         item.notes = notes
         item.barcode = barcode
+        item.brand = brand
     }
 }

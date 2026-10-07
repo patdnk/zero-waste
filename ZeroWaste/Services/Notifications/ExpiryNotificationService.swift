@@ -67,6 +67,20 @@ final class ExpiryNotificationService {
         }
     }
 
+    /// Immediate alert that something in the fridge may be recalled. Tapping it opens the item.
+    func postRecallNotice(for match: RecallMatch) async {
+        guard isAuthorized else { return }
+        let content = UNMutableNotificationContent()
+        content.title = match.confidence == .likely ? "Recall: check your \(match.itemName)" : "Possible recall: \(match.itemName)"
+        content.body = "\(match.alert.displayTitle). Check the pack before eating it."
+        content.sound = .default
+        content.interruptionLevel = .timeSensitive
+        content.userInfo = [Self.itemIDKey: match.itemID.uuidString]
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: "zerowaste.recall.\(match.id)", content: content, trigger: trigger)
+        try? await center.add(request)
+    }
+
     func sendTestNotification() async {
         let content = UNMutableNotificationContent()
         content.title = "Zero Waste reminders are on"

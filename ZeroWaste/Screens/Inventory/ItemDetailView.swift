@@ -40,6 +40,14 @@ struct ItemDetailView: View {
             VStack(alignment: .leading, spacing: Spacing.lg) {
                 DetailTitle(overline: item.category.label, title: item.name)
 
+                ForEach(viewModel.recallMatches) { match in
+                    RecallCard(
+                        match: match,
+                        onNotMine: { withAnimation { viewModel.dismissRecall(match) } },
+                        onThrowAway: { confirmDelete = true }
+                    )
+                }
+
                 statusCard(for: item)
 
                 CardSection("Details") {

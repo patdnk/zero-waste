@@ -26,6 +26,16 @@ struct ItemFormView: View {
                         autoFocus: viewModel.draft.name.isEmpty
                     )
 
+                    LabeledInput(
+                        label: "Brand (optional, helps spot recalls)",
+                        placeholder: "Yeo Valley",
+                        text: Binding(
+                            get: { viewModel.draft.brand ?? "" },
+                            set: { viewModel.draft.brand = $0.trimmingCharacters(in: .whitespaces).isEmpty ? nil : $0 }
+                        ),
+                        accessibilityID: "itemForm.brand"
+                    )
+
                     VStack(alignment: .leading, spacing: Spacing.sm) {
                         Overline("Category")
                         ChipFilter(options: FoodCategory.allCases, selection: $viewModel.draft.category) { $0.label }

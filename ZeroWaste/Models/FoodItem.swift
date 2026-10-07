@@ -115,6 +115,8 @@ final class FoodItem {
     var addedAt: Date
     var expiresAt: Date
     var barcode: String?
+    /// Brand from the barcode lookup; helps match product recalls.
+    var brand: String?
     var notes: String
     var consumedAt: Date?
 
@@ -128,6 +130,7 @@ final class FoodItem {
         addedAt: Date = .now,
         expiresAt: Date,
         barcode: String? = nil,
+        brand: String? = nil,
         notes: String = "",
         consumedAt: Date? = nil
     ) {
@@ -140,6 +143,7 @@ final class FoodItem {
         self.addedAt = addedAt
         self.expiresAt = expiresAt
         self.barcode = barcode
+        self.brand = brand
         self.notes = notes
         self.consumedAt = consumedAt
     }

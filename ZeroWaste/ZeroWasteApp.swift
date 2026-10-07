@@ -45,6 +45,7 @@ struct ZeroWasteApp: App {
             Task {
                 await dependencies.notifications.refreshAuthorizationStatus()
                 await dependencies.syncNotifications()
+                await dependencies.refreshRecalls()
             }
         }
     }
