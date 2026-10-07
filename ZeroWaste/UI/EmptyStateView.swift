@@ -11,30 +11,29 @@ struct EmptyStateView: View {
     var systemImage = "refrigerator"
     var primaryTitle: String?
     var primaryAction: (() -> Void)?
+    var primarySymbol: String?
     var secondaryTitle: String?
     var secondaryAction: (() -> Void)?
 
     var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: systemImage)
-                .font(.system(size: 56))
-                .foregroundStyle(Constants.Brand)
+        VStack(alignment: .leading, spacing: Spacing.md) {
+            IconTile(symbol: systemImage, tint: Constants.BrandOrange, size: 56)
             Text(title)
-                .font(.app(.title2, weight: .bold))
+                .font(.app(.title2, weight: .semibold))
+                .tracking(-0.5)
                 .foregroundStyle(Constants.TextPrimary)
+                .padding(.top, Spacing.sm)
             Text(message)
                 .font(.app(.body))
                 .foregroundStyle(Constants.TextSecondary)
-                .multilineTextAlignment(.center)
             if let primaryTitle, let primaryAction {
-                PrimaryButton(primaryTitle, action: primaryAction)
-                    .padding(.top, 8)
+                PrimaryButton(primaryTitle, systemImage: primarySymbol, kind: .brand, action: primaryAction)
+                    .padding(.top, Spacing.md)
             }
             if let secondaryTitle, let secondaryAction {
-                SecondaryButton(secondaryTitle, action: secondaryAction)
+                PrimaryButton(secondaryTitle, kind: .tonal, action: secondaryAction)
             }
         }
-        .padding(32)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

@@ -10,13 +10,13 @@ struct SplashView: View {
 
     var body: some View {
         ZStack {
-            Constants.BackgroundSecondary.ignoresSafeArea()
-            VStack(spacing: 12) {
-                Image(systemName: "leaf.circle.fill")
-                    .font(.system(size: 72))
-                    .foregroundStyle(Constants.Brand)
+            Constants.BackgroundPrimary.ignoresSafeArea()
+            VStack(spacing: Spacing.lg) {
+                BrandMark()
+                    .frame(width: 112, height: 112)
                 Text("Zero Waste")
-                    .font(.app(.largeTitle, weight: .bold))
+                    .font(.app(.largeTitle, weight: .semibold))
+                    .tracking(-1)
                     .foregroundStyle(Constants.TextPrimary)
             }
         }

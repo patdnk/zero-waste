@@ -27,6 +27,10 @@ final class SettingsCoordinator {
         )
     }
 
+    func showHowItWorks() {
+        parent?.showHowItWorks()
+    }
+
     func showInfo(title: String, message: String) {
         parent?.showAlert(title: title, message: message, primaryButton: .init(title: "OK"))
     }

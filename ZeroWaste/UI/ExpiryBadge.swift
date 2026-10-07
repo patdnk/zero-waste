@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-/// Compact capsule showing how long an item has left, tinted by urgency.
+/// Compact tag showing how long an item has left, tinted by urgency.
 struct ExpiryBadge: View {
     let item: FoodItem
     var soonThresholdDays = 3
@@ -15,10 +15,10 @@ struct ExpiryBadge: View {
         let status = item.status(soonThresholdDays: soonThresholdDays, now: now)
         Text(item.shortExpiryLabel(now: now))
             .font(.app(.caption, weight: .semibold))
-            .foregroundStyle(status == .soon ? Constants.TextPrimary : .white)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 4)
-            .background(status.tint, in: Capsule())
+            .foregroundStyle(status.tint)
+            .padding(.horizontal, 7)
+            .padding(.vertical, 3)
+            .background(status.tint.opacity(0.12), in: RoundedRectangle(cornerRadius: Radius.control))
     }
 }
 
@@ -32,14 +32,20 @@ struct ExpiringChip: View {
         let status = item.status(soonThresholdDays: soonThresholdDays, now: now)
         HStack(spacing: 6) {
             Image(systemName: item.category.symbol)
-            Text(item.name).lineLimit(1)
-            Text("·").foregroundStyle(.secondary)
-            Text(item.shortExpiryLabel(now: now)).foregroundStyle(status.tint).fontWeight(.semibold)
+                .foregroundStyle(status.tint)
+            Text(item.name)
+                .foregroundStyle(Constants.TextPrimary)
+                .lineLimit(1)
+            Text(item.shortExpiryLabel(now: now))
+                .foregroundStyle(status.tint)
+                .fontWeight(.semibold)
         }
-        .font(.app(.subheadline))
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .background(Constants.BackgroundPrimary, in: Capsule())
-        .overlay(Capsule().strokeBorder(status.tint.opacity(0.5)))
+        .font(.app(.caption))
+        .padding(.horizontal, 10)
+        .padding(.vertical, 7)
+        .background(Constants.Surface, in: RoundedRectangle(cornerRadius: Radius.control))
+        .overlay {
+            RoundedRectangle(cornerRadius: Radius.control).strokeBorder(status.tint.opacity(0.4))
+        }
     }
 }

@@ -42,7 +42,6 @@ final class InventoryViewModel {
 
     var searchText = ""
     var storageFilter: StorageFilter = .all
-    var dismissedNotificationTip = false
 
     private let store: InventoryStore
     private let settings: AppSettings
@@ -79,8 +78,40 @@ final class InventoryViewModel {
         }
     }
 
+    /// The single most urgent item, highlighted above the grid while browsing (not searching).
+    var useFirstItem: FoodItem? {
+        guard searchText.trimmingCharacters(in: .whitespaces).isEmpty else { return nil }
+        return filteredItems
+            .filter { $0.status(soonThresholdDays: soonThresholdDays, now: now()).needsAttention }
+            .min { $0.expiresAt < $1.expiresAt }
+    }
+
+    /// Items needing attention other than the highlighted one.
+    var othersNeedingAttention: Int {
+        max(attentionCount - (useFirstItem == nil ? 0 : 1), 0)
+    }
+
+    /// Freezing only makes sense for food that hasn't gone off and isn't frozen already.
+    func canFreeze(_ item: FoodItem) -> Bool {
+        item.storage != .freezer && item.status(soonThresholdDays: soonThresholdDays, now: now()) != .expired
+    }
+
+    var headerDate: String {
+        now().formatted(.dateTime.weekday(.abbreviated).day().month(.abbreviated))
+    }
+
     var sections: [InventorySection] {
-        let grouped = Dictionary(grouping: filteredItems) { $0.status(soonThresholdDays: soonThresholdDays, now: now()) }
+        Self.group(filteredItems, soonThresholdDays: soonThresholdDays, now: now())
+    }
+
+    /// Sections for the grid below the "use first" card, which already shows its item.
+    var gridSections: [InventorySection] {
+        let heroID = useFirstItem?.id
+        return Self.group(filteredItems.filter { $0.id != heroID }, soonThresholdDays: soonThresholdDays, now: now())
+    }
+
+    private static func group(_ items: [FoodItem], soonThresholdDays: Int, now: Date) -> [InventorySection] {
+        let grouped = Dictionary(grouping: items) { $0.status(soonThresholdDays: soonThresholdDays, now: now) }
         return ExpiryStatus.allCases.compactMap { status in
             grouped[status].map { InventorySection(status: status, items: $0) }
         }
@@ -92,13 +123,23 @@ final class InventoryViewModel {
 
     /// Nudge to enable reminders while they're off and the user hasn't refused at the OS level.
     var showsNotificationTip: Bool {
-        !dismissedNotificationTip && !settings.notificationsEnabled && !notifications.isDenied
+        !settings.dismissedNotificationTip && !settings.notificationsEnabled && !notifications.isDenied
     }
 
     // MARK: - Actions
 
     func markUsed(_ item: FoodItem) {
         store.markConsumed(item, at: now())
+    }
+
+    /// Moves an item to the freezer and gives it a typical frozen shelf life of three months.
+    func freeze(_ item: FoodItem) {
+        guard canFreeze(item) else { return }
+        var draft = ItemDraft(item: item)
+        draft.storage = .freezer
+        let frozenUntil = Calendar.current.date(byAdding: .month, value: 3, to: now()) ?? item.expiresAt
+        draft.expiresAt = max(item.expiresAt, frozenUntil)
+        store.update(item, with: draft)
     }
 
     func delete(_ item: FoodItem) {
@@ -124,10 +165,10 @@ final class InventoryViewModel {
     func enableNotifications() async {
         let granted = await notifications.requestAuthorization()
         settings.notificationsEnabled = granted
-        dismissedNotificationTip = true
+        settings.dismissedNotificationTip = true
     }
 
     func dismissNotificationTip() {
-        dismissedNotificationTip = true
+        settings.dismissedNotificationTip = true
     }
 }

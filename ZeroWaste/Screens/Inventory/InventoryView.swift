@@ -10,108 +10,158 @@ struct InventoryView: View {
     @Bindable var coordinator: InventoryCoordinator
     let dependencies: AppDependencies
 
+    private let columns = [GridItem(.flexible(), spacing: Spacing.sm), GridItem(.flexible(), spacing: Spacing.sm)]
+
     var body: some View {
         NavigationStack(path: $coordinator.navigationPath) {
-            Group {
-                if viewModel.isEmpty {
-                    EmptyStateView(
-                        title: "Your fridge is empty",
-                        message: "Scan a label or add something by hand. We'll remind you before it goes off and suggest what to cook.",
-                        primaryTitle: "Scan a label",
-                        primaryAction: { viewModel.showScan() },
-                        secondaryTitle: "Try it with sample food",
-                        secondaryAction: { viewModel.loadSampleData() }
-                    )
-                } else {
-                    list
-                }
-            }
-            .background(Constants.BackgroundSecondary)
-            .navigationTitle("Fridge")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Menu {
-                        Button { viewModel.showScan() } label: {
-                            Label("Scan label or barcode", systemImage: "camera.viewfinder")
+            VStack(spacing: 0) {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: Spacing.lg) {
+                        ScreenHeader(overline: viewModel.headerDate, title: "Fridge", count: viewModel.isEmpty ? nil : viewModel.items.count) {
+                            addMenu
                         }
-                        Button { viewModel.showAddItem() } label: {
-                            Label("Add manually", systemImage: "square.and.pencil")
+
+                        if viewModel.isEmpty {
+                            EmptyStateView(
+                                title: "Your fridge is empty",
+                                message: "Scan a label or add something by hand. We'll remind you before it goes off and suggest what to cook.",
+                                systemImage: "refrigerator",
+                                primaryTitle: "Scan a label",
+                                primaryAction: { viewModel.showScan() },
+                                primarySymbol: "barcode.viewfinder",
+                                secondaryTitle: "Try it with sample food",
+                                secondaryAction: { viewModel.loadSampleData() }
+                            )
+                            .padding(.top, 40)
+                        } else {
+                            content
                         }
-                    } label: {
-                        Image(systemName: "plus")
                     }
-                    .accessibilityIdentifier("inventory.addButton")
+                    .padding(.horizontal, Spacing.gutter)
+                    .padding(.bottom, Spacing.xl)
+                }
+                .scrollDismissesKeyboard(.interactively)
+                if !viewModel.isEmpty {
+                    BottomSearchBar(
+                        text: $viewModel.searchText,
+                        prompt: "Search your food",
+                        accessoryAction: ("barcode.viewfinder", "Scan label or barcode", { viewModel.showScan() }),
+                        accessibilityID: "inventory.search"
+                    )
                 }
             }
+            .pageBackground()
+            .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: InventoryRoute.self) { route in
                 destination(for: route)
             }
         }
     }
 
-    private var list: some View {
-        List {
-            if viewModel.showsNotificationTip {
-                Section {
-                    notificationTip
-                }
-            }
+    // MARK: - Sections
 
-            Section {
-                Picker("Storage", selection: $viewModel.storageFilter) {
-                    ForEach(InventoryViewModel.StorageFilter.allCases, id: \.self) { filter in
-                        Text(filter.title).tag(filter)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets())
-            }
+    @ViewBuilder
+    private var content: some View {
+        if viewModel.showsNotificationTip {
+            notificationTip
+        }
 
-            ForEach(viewModel.sections) { section in
-                Section {
+        if let item = viewModel.useFirstItem {
+            UseFirstCard(
+                item: item,
+                othersNeedingAttention: viewModel.othersNeedingAttention,
+                soonThresholdDays: viewModel.soonThresholdDays,
+                onOpen: { viewModel.showDetails(item) },
+                onUsed: { withAnimation { viewModel.markUsed(item) } },
+                onFreeze: viewModel.canFreeze(item) ? { withAnimation { viewModel.freeze(item) } } : nil,
+                onRecipes: { viewModel.showDetails(item) }
+            )
+        }
+
+        ChipFilter(options: InventoryViewModel.StorageFilter.allCases, selection: $viewModel.storageFilter) { $0.title }
+
+        let sections = viewModel.gridSections
+        if sections.isEmpty {
+            Text(viewModel.searchText.isEmpty ? "Nothing stored here." : "Nothing matches “\(viewModel.searchText)”.")
+                .font(.app(.subheadline))
+                .foregroundStyle(Constants.TextSecondary)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 40)
+        }
+
+        ForEach(sections) { section in
+            VStack(alignment: .leading, spacing: Spacing.sm) {
+                SectionHeading(
+                    title: section.status.sectionTitle,
+                    detail: section.items.count == 1 ? "1 item" : "\(section.items.count) items",
+                    tint: section.status == .fresh ? Constants.TextPrimary : section.status.tint
+                )
+                LazyVGrid(columns: columns, spacing: Spacing.sm) {
                     ForEach(section.items) { item in
                         NavigationLink(value: InventoryRoute.itemDetail(item.id)) {
-                            FoodItemRow(item: item, soonThresholdDays: viewModel.soonThresholdDays)
+                            FoodItemCard(item: item, soonThresholdDays: viewModel.soonThresholdDays)
                         }
-                        .swipeActions(edge: .leading) {
-                            Button { viewModel.markUsed(item) } label: {
-                                Label("Used", systemImage: "checkmark")
-                            }
-                            .tint(Constants.StatusFresh)
-                        }
-                        .swipeActions(edge: .trailing) {
-                            Button(role: .destructive) { viewModel.delete(item) } label: {
-                                Label("Delete", systemImage: "trash")
-                            }
-                        }
+                        .buttonStyle(.plain)
+                        .contextMenu { itemMenu(for: item) }
                     }
-                } header: {
-                    Label(section.status.sectionTitle, systemImage: section.status.symbol)
-                        .foregroundStyle(section.status.tint)
                 }
             }
         }
-        .searchable(text: $viewModel.searchText, prompt: "Search your food")
-        .scrollContentBackground(.hidden)
+    }
+
+    @ViewBuilder
+    private func itemMenu(for item: FoodItem) -> some View {
+        Button { withAnimation { viewModel.markUsed(item) } } label: {
+            Label("Used it", systemImage: "checkmark")
+        }
+        if viewModel.canFreeze(item) {
+            Button { withAnimation { viewModel.freeze(item) } } label: {
+                Label("Move to freezer", systemImage: "snowflake")
+            }
+        }
+        Button { coordinator.showEditItem(id: item.id) } label: {
+            Label("Edit", systemImage: "pencil")
+        }
+        Button(role: .destructive) { withAnimation { viewModel.delete(item) } } label: {
+            Label("Delete", systemImage: "trash")
+        }
+    }
+
+    private var addMenu: some View {
+        Menu {
+            Button { viewModel.showScan() } label: {
+                Label("Scan label or barcode", systemImage: "barcode.viewfinder")
+            }
+            Button { viewModel.showAddItem() } label: {
+                Label("Add manually", systemImage: "square.and.pencil")
+            }
+        } label: {
+            HeaderIconButtonLabel(symbol: "plus")
+        }
+        .accessibilityLabel("Add food")
+        .accessibilityIdentifier("inventory.addButton")
     }
 
     private var notificationTip: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Label("Get reminded before food expires", systemImage: "bell.badge")
-                .font(.app(.headline, weight: .semibold))
-            Text("Turn on reminders to hear about items a few days before their date.")
-                .font(.app(.subheadline))
-                .foregroundStyle(Constants.TextSecondary)
-            HStack {
-                Button("Turn on") { Task { await viewModel.enableNotifications() } }
-                    .buttonStyle(.borderedProminent)
-                    .tint(Constants.Brand)
-                Button("Not now") { viewModel.dismissNotificationTip() }
-                    .buttonStyle(.bordered)
+        HStack(alignment: .top, spacing: Spacing.md) {
+            IconTile(symbol: "bell.badge", tint: Constants.BrandOrange)
+            VStack(alignment: .leading, spacing: Spacing.sm) {
+                Text("Get reminded before food expires")
+                    .font(.app(.subheadline, weight: .semibold))
+                    .foregroundStyle(Constants.TextPrimary)
+                Text("We'll nudge you a few days before the date.")
+                    .font(.app(.caption))
+                    .foregroundStyle(Constants.TextSecondary)
+                HStack(spacing: 6) {
+                    Button("Turn on") { Task { await viewModel.enableNotifications() } }
+                        .buttonStyle(.app(.ink, compact: true))
+                    Button("Not now") { viewModel.dismissNotificationTip() }
+                        .buttonStyle(.app(.tonal, compact: true))
+                }
+                .padding(.top, 2)
             }
         }
-        .padding(.vertical, 4)
+        .cardStyle()
     }
 
     @ViewBuilder

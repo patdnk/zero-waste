@@ -15,11 +15,20 @@ enum Constants {
     static let BackgroundPrimary = dyn(light: 0xFFFBF7, dark: 0x201816)
     static let BackgroundSecondary = dyn(light: 0xF6EEE6, dark: 0x140F0D)
     static let CardTint = dyn(light: 0xF3E1D2, dark: 0x2C201A)
+    /// Card and input fill.
+    static let Surface = dyn(light: 0xFFFFFF, dark: 0x2A201C)
+    /// 1pt card, input and tab bar borders.
+    static let Hairline = dyn(light: 0xEEE1D5, dark: 0x3A2C25)
+    /// Unselected chips, secondary buttons, empty progress tracks.
+    static let ChipFill = dyn(light: 0xF6EEE6, dark: 0x352821)
 
     // MARK: - Text
 
     static let TextPrimary = dyn(light: 0x2B1A12, dark: 0xF7F0EA)
     static let TextSecondary = dyn(light: 0x7A5C4E, dark: 0xC3B2A8)
+    static let TextMuted = dyn(light: 0xA08779, dark: 0x8F7D73)
+    /// Text on an `Ink` fill (selected chips, primary buttons).
+    static let OnInk = dyn(light: 0xFFFBF7, dark: 0x201816)
 
     // MARK: - Brand ramp (dark red → burnt orange → mustard)
 

@@ -105,6 +105,29 @@ struct InventoryViewModelTests {
         #expect(viewModel.filteredItems.map(\.name) == ["Salmon fillets"])
     }
 
+    @Test func useFirstIsTheMostUrgentItemAndLeavesTheGrid() {
+        let (viewModel, _) = makeViewModel()
+        let hero = viewModel.useFirstItem
+        #expect(hero?.name == "Greek yogurt")
+        #expect(!viewModel.gridSections.flatMap(\.items).contains { $0.id == hero?.id })
+        #expect(viewModel.othersNeedingAttention == viewModel.attentionCount - 1)
+
+        viewModel.searchText = "milk"
+        #expect(viewModel.useFirstItem == nil)
+    }
+
+    @Test func freezeMovesToFreezerAndExtendsTheDate() {
+        let (viewModel, store) = makeViewModel()
+        let fresh = store.activeItems.first { $0.storage == .fridge && $0.status(now: now) != .expired }!
+        let expired = store.activeItems.first { $0.status(now: now) == .expired }!
+        #expect(!viewModel.canFreeze(expired))
+
+        viewModel.freeze(fresh)
+        #expect(fresh.storage == .freezer)
+        #expect(fresh.expiresAt >= Calendar.current.date(byAdding: .month, value: 3, to: now)!)
+        #expect(!viewModel.canFreeze(fresh))
+    }
+
     @Test func markUsedRemovesFromActiveList() {
         let (viewModel, store) = makeViewModel()
         let before = viewModel.items.count

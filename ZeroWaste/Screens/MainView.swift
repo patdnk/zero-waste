@@ -12,18 +12,50 @@ struct MainView: View {
 
     private var dependencies: AppDependencies { coordinator.dependencies }
 
+    @State private var isKeyboardVisible = false
+
     var body: some View {
-        TabView(selection: Binding(
-            get: { coordinator.selectedTab },
-            set: { coordinator.selectTab($0) }
-        )) {
-            ForEach(AppCoordinator.AppTab.allCases, id: \.self) { tab in
-                Tab(tab.title, systemImage: tab.symbol, value: tab) {
+        VStack(spacing: 0) {
+            // Every tab stays alive in the ZStack so scroll position and search text survive switching.
+            ZStack {
+                ForEach(AppCoordinator.AppTab.allCases, id: \.self) { tab in
+                    let isSelected = coordinator.selectedTab == tab
                     tabContent(for: tab)
+                        .opacity(isSelected ? 1 : 0)
+                        .allowsHitTesting(isSelected)
+                        .accessibilityHidden(!isSelected)
                 }
             }
+            // Root screens hide the navigation bar, so cover the status bar ourselves.
+            .overlay(alignment: .top) {
+                GeometryReader { geo in
+                    Constants.BackgroundPrimary
+                        .frame(height: geo.safeAreaInsets.top)
+                        .ignoresSafeArea(edges: .top)
+                }
+                .allowsHitTesting(false)
+            }
+
+            // Hidden while typing so the bottom search field sits directly on the keyboard.
+            if !isKeyboardVisible {
+                AppTabBar(selection: Binding(
+                    get: { coordinator.selectedTab },
+                    set: { coordinator.selectTab($0) }
+                ))
+            }
         }
-        .tint(Constants.Brand)
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+            isKeyboardVisible = true
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+            isKeyboardVisible = false
+        }
+        .tint(Constants.BrandOrange)
+        .fullScreenCover(isPresented: $coordinator.isShowingHowItWorks) {
+            WelcomeFactory.make(mode: .replay, dependencies: dependencies) {
+                coordinator.isShowingHowItWorks = false
+            }
+        }
         .sheet(item: $coordinator.presentedSheet) { destination in
             sheetContent(for: destination)
         }

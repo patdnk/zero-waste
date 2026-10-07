@@ -10,41 +10,45 @@ struct CookedView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    ForEach(viewModel.usableItems) { item in
-                        Button { viewModel.toggle(item) } label: {
-                            HStack(spacing: 12) {
-                                Image(systemName: viewModel.isSelected(item) ? "checkmark.circle.fill" : "circle")
-                                    .foregroundStyle(viewModel.isSelected(item) ? Constants.Brand : Constants.TextSecondary)
-                                    .font(.app(.title3))
-                                Text(item.name).foregroundStyle(Constants.TextPrimary)
-                                Spacer()
-                                Text(item.quantityText).foregroundStyle(Constants.TextSecondary)
+            VStack(spacing: 0) {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: Spacing.lg) {
+                        DetailTitle(overline: viewModel.recipe?.title ?? "Cooked", title: "Nice one! What did you use up?")
+
+                        CardSection(footer: "Ticked items are marked as used. Anything unticked stays in your fridge — edit its quantity if you only used some.") {
+                            ForEach(viewModel.usableItems) { item in
+                                let isSelected = viewModel.isSelected(item)
+                                Button { viewModel.toggle(item) } label: {
+                                    HStack(spacing: Spacing.md) {
+                                        Image(systemName: isSelected ? "checkmark.square.fill" : "square")
+                                            .font(.system(size: 20))
+                                            .foregroundStyle(isSelected ? Constants.BrandOrange : Constants.TextMuted)
+                                        Text(item.name)
+                                            .font(.app(.subheadline, weight: .medium))
+                                            .foregroundStyle(Constants.TextPrimary)
+                                        Spacer()
+                                        Text(item.quantityText)
+                                            .font(.app(.caption))
+                                            .foregroundStyle(Constants.TextSecondary)
+                                    }
+                                    .contentShape(Rectangle())
+                                }
+                                .buttonStyle(.plain)
+                                .accessibilityAddTraits(isSelected ? .isSelected : [])
                             }
-                            .contentShape(Rectangle())
                         }
-                        .buttonStyle(.plain)
                     }
-                } header: {
-                    Text("Nice one! What did you use up?")
-                } footer: {
-                    Text("Ticked items are marked as used. Anything unticked stays in your fridge — edit its quantity if you only used some.")
+                    .padding(.horizontal, Spacing.gutter)
+                    .padding(.bottom, Spacing.xl)
                 }
+
+                PrimaryButton(viewModel.selectedCount == 0 ? "Done" : "Update fridge") { viewModel.confirm() }
+                    .accessibilityIdentifier("cooked.confirm")
+                    .padding(.horizontal, Spacing.gutter)
+                    .padding(.vertical, Spacing.sm)
             }
-            .scrollContentBackground(.hidden)
-            .background(Constants.BackgroundSecondary)
-            .navigationTitle(viewModel.recipe?.title ?? "Cooked")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { viewModel.cancel() }
-                }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button(viewModel.selectedCount == 0 ? "Done" : "Update fridge") { viewModel.confirm() }
-                        .accessibilityIdentifier("cooked.confirm")
-                }
-            }
+            .pageBackground()
+            .topBar(.close { viewModel.cancel() })
         }
     }
 }

@@ -142,4 +142,8 @@ final class SettingsViewModel {
     private func resync() {
         Task { await dependencies.syncNotifications() }
     }
+
+    func showHowItWorks() {
+        coordinator.showHowItWorks()
+    }
 }

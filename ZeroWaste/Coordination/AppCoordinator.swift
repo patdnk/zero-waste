@@ -17,6 +17,8 @@ final class AppCoordinator {
     var selectedTab: AppTab = .fridge
     var presentedSheet: SheetDestination?
     var alertConfig: AlertConfig?
+    /// Onboarding replayed from Settings, shown full screen over the tabs.
+    var isShowingHowItWorks = false
 
     let dependencies: AppDependencies
 
@@ -56,6 +58,14 @@ final class AppCoordinator {
             case .settings: "gearshape"
             }
         }
+
+        var selectedSymbol: String {
+            switch self {
+            case .fridge: "refrigerator.fill"
+            case .recipes: "frying.pan.fill"
+            case .settings: "gearshape.fill"
+            }
+        }
     }
 
     func selectTab(_ tab: AppTab) {
@@ -86,6 +96,10 @@ final class AppCoordinator {
 
     func dismissSheet() {
         presentedSheet = nil
+    }
+
+    func showHowItWorks() {
+        isShowingHowItWorks = true
     }
 
     // MARK: - Alerts

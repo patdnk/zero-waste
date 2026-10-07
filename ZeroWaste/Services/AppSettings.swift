@@ -19,6 +19,7 @@ final class AppSettings {
         static let notifyHour = "notifyHour"
         static let notifyMinute = "notifyMinute"
         static let soonThresholdDays = "soonThresholdDays"
+        static let dismissedNotificationTip = "dismissedNotificationTip"
     }
 
     private let defaults: UserDefaults
@@ -50,6 +51,11 @@ final class AppSettings {
         didSet { defaults.set(soonThresholdDays, forKey: Keys.soonThresholdDays) }
     }
 
+    /// The Fridge screen's "turn on reminders" tip was answered (turned on or "Not now").
+    var dismissedNotificationTip: Bool {
+        didSet { defaults.set(dismissedNotificationTip, forKey: Keys.dismissedNotificationTip) }
+    }
+
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
         hasCompletedWelcome = defaults.bool(forKey: Keys.hasCompletedWelcome)
@@ -58,6 +64,7 @@ final class AppSettings {
         notifyHour = defaults.object(forKey: Keys.notifyHour) as? Int ?? NotificationPreferences.default.hour
         notifyMinute = defaults.object(forKey: Keys.notifyMinute) as? Int ?? NotificationPreferences.default.minute
         soonThresholdDays = defaults.object(forKey: Keys.soonThresholdDays) as? Int ?? 3
+        dismissedNotificationTip = defaults.bool(forKey: Keys.dismissedNotificationTip)
     }
 
     var notificationPreferences: NotificationPreferences {

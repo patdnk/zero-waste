@@ -15,35 +15,39 @@ struct ScanFlowView: View {
     var body: some View {
         @Bindable var coordinator = viewModel.coordinator
         NavigationStack(path: $coordinator.navigationPath) {
-            List {
-                Section {
-                    if viewModel.supportsLiveScanning {
-                        Button { viewModel.startLiveScan() } label: {
-                            ScanOptionRow(symbol: "camera.viewfinder", title: "Scan with the camera", subtitle: "Reads dates and barcodes live")
+            ScrollView {
+                VStack(alignment: .leading, spacing: Spacing.lg) {
+                    DetailTitle(overline: "Scan or type", title: "Add food")
+
+                    VStack(spacing: Spacing.sm) {
+                        if viewModel.supportsLiveScanning {
+                            Button { viewModel.startLiveScan() } label: {
+                                ScanOptionRow(symbol: "barcode.viewfinder", title: "Scan with the camera", subtitle: "Reads dates and barcodes live", isPrimary: true)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityIdentifier("scan.live")
                         }
-                        .accessibilityIdentifier("scan.live")
+                        PhotosPicker(selection: $pickerItem, matching: .images) {
+                            ScanOptionRow(symbol: "photo.on.rectangle", title: "Choose a photo of the label", subtitle: "Pick a picture of the packaging")
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("scan.photo")
+                        Button { viewModel.enterManually() } label: {
+                            ScanOptionRow(symbol: "square.and.pencil", title: "Type it in", subtitle: "No label to read")
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("scan.manual")
                     }
-                    PhotosPicker(selection: $pickerItem, matching: .images) {
-                        ScanOptionRow(symbol: "photo.on.rectangle", title: "Choose a photo of the label", subtitle: "Pick a picture of the packaging")
-                    }
-                    .accessibilityIdentifier("scan.photo")
-                    Button { viewModel.enterManually() } label: {
-                        ScanOptionRow(symbol: "square.and.pencil", title: "Type it in", subtitle: "No label to read")
-                    }
-                    .accessibilityIdentifier("scan.manual")
-                } footer: {
+
                     Text("Point at the best-before or use-by date. A barcode helps fill in the product name.")
+                        .font(.app(.caption))
+                        .foregroundStyle(Constants.TextSecondary)
                 }
+                .padding(.horizontal, Spacing.gutter)
+                .padding(.bottom, Spacing.xl)
             }
-            .scrollContentBackground(.hidden)
-            .background(Constants.BackgroundSecondary)
-            .navigationTitle("Add food")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { viewModel.cancel() }
-                }
-            }
+            .pageBackground()
+            .topBar(.close { viewModel.cancel() })
             .navigationDestination(for: ScanRoute.self) { route in
                 destination(for: route, coordinator: coordinator)
             }
@@ -96,19 +100,27 @@ private struct ScanOptionRow: View {
     let symbol: String
     let title: String
     let subtitle: String
+    var isPrimary = false
 
     var body: some View {
-        HStack(spacing: 14) {
+        HStack(spacing: Spacing.md) {
             Image(systemName: symbol)
-                .font(.app(.title2))
-                .foregroundStyle(Constants.Brand)
-                .frame(width: 32)
+                .font(.system(size: 20, weight: .semibold))
+                .foregroundStyle(isPrimary ? .white : Constants.BrandOrange)
+                .frame(width: 44, height: 44)
+                .background(isPrimary ? Constants.BrandOrange : Constants.BrandOrange.opacity(0.12),
+                            in: RoundedRectangle(cornerRadius: Radius.control))
             VStack(alignment: .leading, spacing: 2) {
-                Text(title).font(.app(.headline, weight: .semibold)).foregroundStyle(Constants.TextPrimary)
-                Text(subtitle).font(.app(.subheadline)).foregroundStyle(Constants.TextSecondary)
+                Text(title).font(.app(.subheadline, weight: .semibold)).foregroundStyle(Constants.TextPrimary)
+                Text(subtitle).font(.app(.caption)).foregroundStyle(Constants.TextSecondary)
             }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(Constants.TextMuted)
         }
-        .padding(.vertical, 4)
+        .cardStyle()
+        .contentShape(Rectangle())
     }
 }
 

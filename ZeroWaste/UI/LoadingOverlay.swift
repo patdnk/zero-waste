@@ -21,7 +21,7 @@ private struct LoadingOverlayModifier: ViewModifier {
                         Text(message).font(.app(.subheadline)).foregroundStyle(.white)
                     }
                     .padding(24)
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
+                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: Radius.card))
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {}

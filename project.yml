@@ -48,6 +48,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mazesys.zerowaste.tests
+        GENERATE_INFOPLIST_FILE: YES
 schemes:
   ZeroWaste:
     build:

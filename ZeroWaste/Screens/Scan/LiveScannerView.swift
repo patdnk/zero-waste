@@ -76,7 +76,7 @@ struct LiveScannerView: View {
             }
         }
         .padding(16)
-        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: Radius.card))
         .padding(16)
     }
 
