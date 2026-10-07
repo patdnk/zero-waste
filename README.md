@@ -1,4 +1,4 @@
-# Zero Waste
+# Zero Bite
 
 An iOS app that catalogues what's in your fridge, freezer and cupboard, reminds you before
 food expires, and ranks recipes by what you can cook right now — expiring items first.
@@ -38,14 +38,14 @@ Requires Xcode 26 and [XcodeGen](https://github.com/yonaskolb/XcodeGen).
 
 ```bash
 xcodegen generate
-open ZeroWaste.xcodeproj
+open ZeroBite.xcodeproj
 ```
 
-Run the `ZeroWaste` scheme on an iPhone simulator. Launch argument `--sample-data` fills an
+Run the `ZeroBite` scheme on an iPhone simulator. Launch argument `--sample-data` fills an
 empty fridge. Run tests with ⌘U or:
 
 ```bash
-xcodebuild test -project ZeroWaste.xcodeproj -scheme ZeroWaste -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
+xcodebuild test -project ZeroBite.xcodeproj -scheme ZeroBite -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 ```
 
 ### Typeface

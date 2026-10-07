@@ -77,7 +77,7 @@ enum Marketing {
 
     static func registerFont() {
         let root = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
-        let font = root.appendingPathComponent("ZeroWaste/Resources/Fonts/Mona-Sans.ttf")
+        let font = root.appendingPathComponent("ZeroBite/Resources/Fonts/Mona-Sans.ttf")
         CTFontManagerRegisterFontsForURL(font as CFURL, .process, nil)
         if let match = NSFontManager.shared.availableFontFamilies.first(where: { $0.lowercased().contains("mona sans") }) {
             family = match
@@ -149,7 +149,7 @@ private struct PanelView: View {
                 if panel.showsLockup {
                     HStack(spacing: 22 * s) {
                         BrandMark().frame(width: 92 * s, height: 92 * s)
-                        Text("Zero Waste")
+                        Text("Zero Bite")
                             .font(Marketing.font(58 * s, .semibold))
                             .tracking(-1 * s)
                             .foregroundStyle(palette.text)
@@ -247,7 +247,7 @@ private struct NotificationBanner: View {
                 .background(BrandMark.ink, in: RoundedRectangle(cornerRadius: 26 * s, style: .continuous))
             VStack(alignment: .leading, spacing: 8 * s) {
                 HStack {
-                    Text("ZERO WASTE").font(Marketing.font(34 * s, .semibold)).tracking(1 * s)
+                    Text("ZERO BITE").font(Marketing.font(34 * s, .semibold)).tracking(1 * s)
                     Spacer()
                     Text("now").font(Marketing.font(34 * s, .regular))
                 }

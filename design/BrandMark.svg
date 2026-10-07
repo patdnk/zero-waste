@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <!-- Zero Waste mark. Geometry mirrors ZeroWaste/UI/BrandMark.swift, which renders the shipped icons. -->
+  <!-- Zero Bite mark. Geometry mirrors ZeroBite/UI/BrandMark.swift, which renders the shipped icons. -->
   <defs>
     <clipPath id="ring-edge"><circle cx="512" cy="512" r="413"/></clipPath>
     <mask id="bite">

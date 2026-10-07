@@ -18,4 +18,4 @@ playground.xcworkspace
 .DS_Store
 
 # Fonts are downloaded by scripts/fetch-fonts.sh
-ZeroWaste/Resources/Fonts/*.ttf
+ZeroBite/Resources/Fonts/*.ttf

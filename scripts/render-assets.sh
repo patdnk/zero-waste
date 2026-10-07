@@ -9,13 +9,13 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BIN="$(mktemp -d)/render-assets"
 
 xcrun --sdk macosx swiftc -parse-as-library -O \
-  "$ROOT/design/render-assets.swift" "$ROOT/design/Marketing.swift" "$ROOT/ZeroWaste/UI/BrandMark.swift" \
+  "$ROOT/design/render-assets.swift" "$ROOT/design/Marketing.swift" "$ROOT/ZeroBite/UI/BrandMark.swift" \
   -o "$BIN" 2>&1 | grep -v "^$" || true
 [[ -x "$BIN" ]] || { echo "build failed" >&2; exit 1; }
 
 case "${1:-icons}" in
   icons)
-    "$BIN" icons "$ROOT/ZeroWaste/Assets.xcassets/AppIcon.appiconset"
+    "$BIN" icons "$ROOT/ZeroBite/Assets.xcassets/AppIcon.appiconset"
     ;;
   marketing)
     "$BIN" marketing "$ROOT/appstore/raw" "$ROOT/appstore/screenshots"

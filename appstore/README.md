@@ -11,7 +11,7 @@
 
 ## Regenerating
 
-Icons and panels are rendered from `ZeroWaste/UI/BrandMark.swift`, the same view the app draws,
+Icons and panels are rendered from `ZeroBite/UI/BrandMark.swift`, the same view the app draws,
 so the logo can't drift between the app and the store.
 
 ```bash
@@ -30,7 +30,7 @@ Panel copy, colours and pop-out crops are in `design/Marketing.swift`.
    so Spinach (due today) is the "Use first" item.
 3. Save full-resolution captures with `xcrun simctl io booted screenshot appstore/raw/<name>.png`:
    `fridge`, `item-detail` (Spinach), `recipes`, `recipe-detail` (top recipe), `add-food` (scan sheet),
-   `onboarding-scan` (Settings → How Zero Waste works → page 2).
+   `onboarding-scan` (Settings → How Zero Bite works → page 2).
 4. If a screen's layout changed, update the `popOut` crop rectangles in `design/Marketing.swift`.
 
 The live camera option doesn't exist on the simulator, so the Add food capture shows only the photo and
